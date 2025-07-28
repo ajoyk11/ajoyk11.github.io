@@ -1,4 +1,4 @@
-% assign author = page.author | default: page.authors[0] | default: site.author %}
+{% assign author = page.author | default: page.authors[0] | default: site.author %}
 {% assign author = site.data.authors[author] | default: author %}
 
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -10,7 +10,7 @@
       {% if author.home %}
         <a href="{{ author.home | relative_url }}">
           <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" itemprop="image">
-        </0a>
+        </a>
       {% else %}
         <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" itemprop="image">
       {% endif %}
@@ -50,10 +50,10 @@
       </li>
 
 
-      <!-- Researchgate -->
+      <!-- ResearchGate -->
       <li>
         <a href="https://www.researchgate.net/profile/Ajoy-Karmakar" itemprop="sameAs" rel="nofollow noopener noreferrer">
-          <span class="iconify" data-icon="simple-icons:researchgate" data-inline="false"></span><span class="label">reserachgate</span>
+          <span class="iconify" data-icon="simple-icons:researchgate" data-inline="false"></span>
         </a>
       </li>
 
