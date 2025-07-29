@@ -7,22 +7,12 @@
 
   {% if author.avatar %}
     <div class="author__avatar">
-      {% if author.home %}
-        <a href="{{ author.home | relative_url }}">
-          <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" itemprop="image">
-        </a>
-      {% else %}
-        <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" itemprop="image">
-      {% endif %}
+      <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" itemprop="image">
     </div>
   {% endif %}
 
   <div class="author__content">
-    {% if author.home %}
-      <a href="{{ author.home | relative_url }}"><h3 class="author__name" itemprop="name">{{ author.name }}</h3></a>
-    {% else %}
-      <h3 class="author__name" itemprop="name">{{ author.name }}</h3>
-    {% endif %}
+    <h3 class="author__name" itemprop="name">{{ author.name }}</h3>
     {% if author.bio %}
       <div class="author__bio" itemprop="description">
         {{ author.bio | markdownify }}
@@ -31,49 +21,50 @@
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
+    <button class="btn btn--inverse">Connect</button>
     <ul class="author__urls social-icons">
      
-     <!-- Location -->
+      <!-- Location (no link needed, but if you want a map, keep it) -->
       <li>
-        <a href="https://share.google/iDYRZHBA5Ijgqel5r" itemprop="sameAs" rel="nofollow noopener noreferrer">
-          <i class="fas fa-map-marker-alt"></i><span class="label">Leh, Ladakh,India</span>
-        </a>
+        <span><i class="fas fa-map-marker-alt"></i> Leh, Ladakh, India</span>
       </li>
       
       <!-- Mail -->
       <li>
         <a href="mailto:ajoy.iirs@gmail.com">
           <meta itemprop="email" content="ajoy.iirs@gmail.com" />
-          <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</span>
+          <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i>
+          <span class="label">Email</span>
         </a>
       </li>
-
 
       <!-- ResearchGate -->
       <li>
         <a href="https://www.researchgate.net/profile/Ajoy-Karmakar" itemprop="sameAs" rel="nofollow noopener noreferrer">
           <span class="iconify" data-icon="simple-icons:researchgate" data-inline="false"></span>
+          <span class="label">ResearchGate</span>
         </a>
       </li>
 
       <!-- Google Scholar -->
       <li>
         <a href="https://scholar.google.com/citations?user=ObfU_PwAAAAJ&hl=en&authuser=1" itemprop="sameAs" rel="nofollow noopener noreferrer">
-          <span class="iconify" data-icon="simple-icons:googlescholar" data-inline="false"></span><span class="label">Google Scholar</span>
+          <span class="iconify" data-icon="simple-icons:googlescholar" data-inline="false"></span>
+          <span class="label">Google Scholar</span>
         </a>
       </li>
 
-     <!-- GitHub -->
-     <li>
-       <a href="https://github.com/ajoyk11/" itemprop="sameAs" rel="nofollow noopener noreferrer">
-         <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
-       </a>
-     </li>
-   
-    
-      
-      {% include author-profile-custom-links.html %}
+      <!-- GitHub -->
+      <li>
+        <a href="https://github.com/ajoyk11/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+          <i class="fab fa-fw fa-github" aria-hidden="true"></i>
+          <span class="label">GitHub</span>
+        </a>
+      </li>
+
     </ul>
   </div>
-</div> 
+</div>
+
+
+//OK
