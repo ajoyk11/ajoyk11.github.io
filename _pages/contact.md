@@ -12,17 +12,17 @@ You can write to me in either of these IDs.
 
 ## Lab
 
-You can find me at  
-GB Pant National Institute of Himalayan Environment(NIHE),<br>
-Ladakh Regional Center,  
+You can find me at  <br>
+GB Pant National Institute of Himalayan Environment (NIHE),<br>
+Ladakh Regional Center,<br>
 Ruthpa House, Near Islamia Public School,<br>
-DIHAR Road - Leh 194101 Ladakh(UT), India <a href="https://maps.app.goo.gl/kovdRJd8VC8ycGAw7" target="_blank" rel="noopener">
-  <i class="fas fa-map-marked-alt"></i> Map </a
+DIHAR Road - Leh 194101 Ladakh (UT), India [🗺️ Map](https://maps.app.goo.gl/kovdRJd8VC8ycGAw7)
+
 
 ## Where to Find Me
 
 <iframe width="400" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-src="https://www.openstreetmap.org/export/embed.html?bbox=77.576721%2C34.144711%2C77.579521%2C34.146711&amp;layer=mapnik&amp;marker=34.145711%2C77.578121"
+src="https://www.openstreetmap.org/export/embed.html?bbox=bbox=77.5700,34.1400,77.5860,34.1520&amp;layer=mapnik&amp;marker=34.1456775%2C77.5781226"
 style="border: 1px solid black"></iframe>
 <br/>
 <small>
