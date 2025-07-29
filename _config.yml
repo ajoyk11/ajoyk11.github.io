@@ -1,78 +1,22 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: "Ajoy Karmakar"
 name: "Ajoy Karmakar"
 email: "ajoy.iirs@gmail.com"
-description: >- # this means to ignore newlines until "baseurl:"
-  Ajoy Karmakar's web page
+description: "Ajoy Karmakar's personal web page"
 url: "https://ajoyk11.github.io"
+baseurl: ""  # Leave blank for user.github.io type site
 repository: "ajoyk11/ajoyk11.github.io"
 minimal_mistakes_skin: "dirt"
 search: false
 
-# Analytics
-analytics:
-  provider: "google-gtag"
-  google:
-    tracking_id: "UA-34103986-3"
-    anonymize_ip: false # default
+# Theme
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
-# Social Sharing
-facebook:
-  username: "ajoyk11"
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type: "Person"
-  name: "Ajoy Karmakar"
-  links:
-    - "https://www.facebook.com/ajoyk11"
-    - "https://github.com/ajoyk11"
-
-# Build settings
-markdown: kramdown
-remote_theme: "mmistakes/minimal-mistakes@4.19.2
-"
-include:
-  - _pages
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
-# Plugins (previously gems:)
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jemoji
-  - jekyll-include-cache
-
+# Author information (for sidebar)
 author:
-  name   : "Ajoy Karmakar"
-  avatar : "/assets/images/me.jpg"
-  bio    : "Remote Sensing Reseracher"
+  name: "Ajoy Karmakar"
+  avatar: "/assets/images/me.jpg"  # Make sure this image exists
+  bio: "Remote Sensing Researcher"
   location: "Leh, Ladakh, India"
   links:
     - label: "Facebook"
@@ -82,20 +26,44 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ajoyk11"
 
-
-
+# Footer social links
 footer:
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "www.linkedin.com/in/ajoykarmakar"
+      url: "https://www.linkedin.com/in/ajoykarmakar"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/rajarshi008"
+      url: "https://github.com/ajoyk11"
 
+# Social Sharing Metadata
+social:
+  type: "Person"
+  name: "Ajoy Karmakar"
+  links:
+    - "https://www.facebook.com/ajoyk11"
+    - "https://github.com/ajoyk11"
+
+# Analytics (optional)
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-34103986-3"
+    anonymize_ip: false
+
+# Build settings
+markdown: kramdown
+include:
+  - _pages
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jemoji
+  - jekyll-include-cache
 
 defaults:
-  # _pages
   - scope:
       path: "_pages"
       type: pages
@@ -103,6 +71,7 @@ defaults:
       layout: single
       author_profile: true
 
+# Archives (optional)
 category_archive:
   type: liquid
   path: /categories/
