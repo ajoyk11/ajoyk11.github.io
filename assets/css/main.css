@@ -1287,8 +1287,9 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 .page__footer-follow li {
   text-transform: none !important;
 }
-/* TO CHANGE THE FONT TO LM ROMAN */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* TO CHANGE THE FONT */
+/* @import url('https://fonts.googleapis.com/css?family=Roboto');
 body, .page, .page__content, .site {
   font-family: 'Roboto', serif !important;
 }
+*/
