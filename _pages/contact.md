@@ -17,8 +17,7 @@ GB Pant National Institute of Himalayan Environment(NIHE),<br>
 Ladakh Regional Center,  
 Ruthpa House, Near Islamia Public School,<br>
 DIHAR Road - Leh 194101 Ladakh(UT), India <a href="https://maps.app.goo.gl/kovdRJd8VC8ycGAw7" target="_blank" rel="noopener">
-  <i class="fas fa-map-marked-alt"></i> Map
-</a
+  <i class="fas fa-map-marked-alt"></i> Map </a
 
 ## Where to Find Me
 
@@ -27,6 +26,6 @@ src="https://www.openstreetmap.org/export/embed.html?bbox=77.576721%2C34.144711%
 style="border: 1px solid black"></iframe>
 <br/>
 <small>
-  <a href="https://www.openstreetmap.org/#map=19/34.145711/77.578121">View Larger Map</a>
+  <a href="https://www.openstreetmap.org/#map=16/34.1456775/77.5781226">View Larger Map</a>
 </small>
 
