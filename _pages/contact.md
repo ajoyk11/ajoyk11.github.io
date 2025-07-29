@@ -3,7 +3,7 @@ title: "Contact"
 permalink: /contact/
 ---
 
-## Office
+## Lab
 
 You can find me at
 GB Pant National Institute of Himalayan Environment(NIHE), Ladakh Regional Center, 
