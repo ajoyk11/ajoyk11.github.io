@@ -1276,4 +1276,9 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 .page__footer-follow li {
   text-transform: none !important;
 }
+/* TO CHANGE THE FONT TO LM ROMAN */
+@import url('https://fonts.cdnfonts.com/css/latin-modern-roman');
+body {
+  font-family: 'Latin Modern Roman', serif !important;
+}
 
