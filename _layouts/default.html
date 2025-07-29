@@ -1,1 +1,16 @@
+---
+# This is a copy of Minimal Mistakes' default layout.
+---
+{% include head.html %}
+<body class="layout--default">
+  <div class="initial-content">
+    {% include skip-links.html %}
+    {% include masthead.html %}
+    <main id="main" class="page-content" aria-label="Content">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </div>
+  {% include scripts.html %}
+</body>
 
