@@ -16,10 +16,7 @@ You can find me at
 GB Pant National Institute of Himalayan Environment(NIHE),<br>
 Ladakh Regional Center,  
 Ruthpa House, Near Islamia Public School,<br>
-GB Pant National Institute of Himalayan Environment(NIHE),<br>
-Ladakh Regional Center,  
-Ruthpa House, Near Islamia Public School,<br>
-DIHAR Road - Leh 194101 Ladakh(UT), India <a href="https://share.google/ODyT96rUlJy9zswNr" target="_blank" rel="noopener">
+DIHAR Road - Leh 194101 Ladakh(UT), India <a href="https://maps.app.goo.gl/kovdRJd8VC8ycGAw7" target="_blank" rel="noopener">
   <i class="fas fa-map-marked-alt"></i> Map
 </a
 
