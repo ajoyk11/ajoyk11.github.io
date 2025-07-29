@@ -9,17 +9,13 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: "Ajoy Karmakar"
 name: "Ajoy Karmakar"
 email: "ajoy.iirs@gmail.com"
 description: >-
   Ajoy Karmakar's personal web page
 url: "https://ajoyk11.github.io"
-baseurl: ""  # Leave blank for GitHub user pages
+baseurl: ""  # ← required
 repository: "ajoyk11/ajoyk11.github.io"
 minimal_mistakes_skin: "dirt"
 search: false
@@ -45,7 +41,7 @@ social:
     - "https://www.facebook.com/ajoyk11"
     - "https://github.com/ajoyk11"
 
-# Author information (sidebar)
+# Author block
 author:
   name   : "Ajoy Karmakar"
   avatar : "/assets/images/me.jpg"
@@ -59,7 +55,7 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ajoyk11"
 
-# Footer social links
+# Footer links
 footer:
   links:
     - label: "LinkedIn"
@@ -69,7 +65,7 @@ footer:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ajoyk11"
 
-# Build settings
+# Markdown and build
 markdown: kramdown
 include:
   - _pages
@@ -82,7 +78,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-# Layout defaults
+# Page defaults
 defaults:
   - scope:
       path: "_pages"
@@ -91,7 +87,7 @@ defaults:
       layout: single
       author_profile: true
 
-# Archive pages
+# Archives
 category_archive:
   type: liquid
   path: /categories/
