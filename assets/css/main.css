@@ -1,3 +1,14 @@
+/* CHANGE THE FONT */
+@font-face {
+    font-family: 'LMRoman10';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.cdnfonts.com/s/266/lmroman10-regular.woff') format('woff');
+}
+body, .page, .page__content, .site {
+  font-family: 'LMRoman10', 'Times New Roman', Times, serif !important;
+}
+
 /* ========================================================================== Dirt skin ========================================================================== */
 /* Colors */
 /* dirt syntax highlighting (base16) */
