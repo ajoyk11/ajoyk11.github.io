@@ -5,7 +5,8 @@ permalink: /contact/
 
 ## Office
 
-You can find me in Govind Ballabh Pant National Institute of Himalayan Environment(NIHE), Ladakh Regonal Center, Ruthpa House, Near Islamia Public School, Dihar Road - Leh 194101 Ladakh(UT), India  [<i class="fas fa-map-marked-alt"></i>](https://share.google/ODyT96rUlJy9zswNr) 
+You can find me in GB Pant National Institute of Himalayan Environment(NIHE), Ladakh Regional Center, 
+Ruthpa House, Near Islamia Public School, DIHAR Road - Leh 194101 Ladakh(UT), India  [<i class="fas fa-map-marked-alt"></i>](https://share.google/ODyT96rUlJy9zswNr) 
 
 
 ## Email
