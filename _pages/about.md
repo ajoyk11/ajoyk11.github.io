@@ -8,7 +8,7 @@ author_profile: true
 
 I am a Junior Research Fellow at [Ladakh Regional Center](https://gbpihed.gov.in/Ladakh_Regional_Centre_detail.php),<br>
 [G B Pant National Institute of Himalayan Environment](https://gbpihed.gov.in/),<br>
-working under [Dr. Sandipan Mukherjee](https://scholar.google.com/citations?user=ZdwopNMAAAAJ&hl=en), (Scientist-E & Head,LRC).<br>
+working under [Dr. Sandipan Mukherjee](https://scholar.google.com/citations?user=ZdwopNMAAAAJ&hl=en), <small>(Scientist-E & Head,LRC).<br></small>
 
 Previously, I was a postgraduate researcher at the <br>
 [Indian Institute of Remote Sensing -ISRO](https://www.iirs.gov.in/),<br>
