@@ -54,6 +54,6 @@ author_profile: true
 ### RS-GIS Intern  
 **Stand For Forests Foundation, India**  
 *Oct 2023 – Dec 2023*  
-- Supported multiple conservation and landscape-level monitoring projects  
+- Supported with RS & GIS in Various projects  
 - Tasks included:
   - Geospatial Analysis  
