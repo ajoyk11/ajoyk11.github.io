@@ -14,8 +14,9 @@ Previously, I was a postgraduate researcher at the <br>
 [Indian Institute of Remote Sensing -ISRO](https://www.iirs.gov.in/),<br>
 advised by  [Dr. Taibanganba Watham](https://www.iirs.gov.in/taibanganba-watham), <small>(Scientist/Engineer -SE)</small>.<br>
 
-Earlier, I was a master's student at the Department of Environmental Science, [Sidho-Kanho-Birsha University](https://www.skbu.ac.in/) and<br>
-completed my bachelor's degree  from [Bankura Sammilani College](https://bankurasammilanicollege.net/).<br>
+Earlier, I was a master's student at the Dept. of Environmental Science, [Sidho-Kanho-Birsha University](https://www.skbu.ac.in/)<br>
+and completed my bachelor's degree  from <br>
+[Bankura Sammilani College](https://bankurasammilanicollege.net/).<br>
 
 
-Broadly, I am interested in the Biosphere-atmosphere interaction, Carbon Flux Studies, and Remote Sensing.
+Broadly, I am interested in biosphere-atmosphere interactions, Carbon Flux Studies, and Remote Sensing.
