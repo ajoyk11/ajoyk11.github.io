@@ -16,8 +16,7 @@ advised by  [Dr. Taibanganba Watham](https://www.iirs.gov.in/taibanganba-watham)
 
 Earlier, I was a master's student at the<br>
 Dept. of Environmental Science, [Sidho-Kanho-Birsha University](https://www.skbu.ac.in/)<br>
-and completed my bachelor's degree  from <br>
-the [Bankura Sammilani College](https://bankurasammilanicollege.net/).<br>
+and completed my bachelor's from the [Bankura Sammilani College](https://bankurasammilanicollege.net/).<br>
 
 
 Broadly, I am interested in biosphere-atmosphere interactions, Carbon Flux Studies, and Remote Sensing.
