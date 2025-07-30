@@ -15,23 +15,25 @@ author_profile: true
 - Conducting field campaigns and analyzing flux tower eddy covariance data  
 - Responsibilities include:
   - Maintaining flux tower instruments  
-  - Processing and analyzing tower-based carbon and energy flux data  
+  - Processing and analyzing tower-based carbon and hydrological flux data  
 
 ---
 
 ### Post Graduate Researcher  
 **Indian Institute of Remote Sensing (IIRS), India**  
-*July 2024 – June 2025*  
-- Field visits and data collection in fire-affected forests  
-- Analyzed eddy covariance carbon flux data using Python and scientific tools
+*July 2024 – June 2025*
+- **Project:** *Impact of Fire on Carbon Flux in North Western Himalaya*  
+- **Advisor:** Dr. Taibanganba Watham, Scientist/Engineer - SE
+- Responsibilities include:
+- Field visits and data collection 
+- Analyzed eddy covariance carbon flux data
 
 ---
 
 ### Research Intern  
 **CSIR - Central Mechanical Engineering Research Institute, India**  
-*April 2023 – June 2023*  
-- Worked on plastic pyrolysis and gas chromatography analysis  
-- Assisted in lab-scale thermal conversion experiments
+*April 2023 – June 2023*
+- **Advisor:** Dr. Biswajit Ruj, Chief Scientist
 
 ---
 
@@ -53,5 +55,4 @@ author_profile: true
 *Oct 2023 – Dec 2023*  
 - Supported multiple conservation and landscape-level monitoring projects  
 - Tasks included:
-  - Preprocessing of satellite imagery  
-  - Forest boundary mapping and NDVI analysis  
+  - Geospatial Analysis  
