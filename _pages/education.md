@@ -29,4 +29,4 @@ author_profile: true
 **B.Sc in Zoology**  
 *Aug 2018 – July 2021*  
 - **Dissertation:** *Waterbody Assessment using Water Quality Index and Zooplankton Diversity*  
-- **Advisor:** [Dr. Surajit Majumder](https://bankurasammilanicollege.net/dept_contents.php?did=16&item_id=1) *(listed under Zoology faculty)*
+- **Advisor:** [Dr. Surajit Majumder](https://www.researchgate.net/profile/Surajit-Majumder)
