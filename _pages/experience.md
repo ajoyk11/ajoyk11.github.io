@@ -43,7 +43,7 @@ author_profile: true
 **Equator Geo Pvt. Ltd., India**  
 *Feb 2025 – April 2025*  
 - **Project:** *The Race to Net Zero*
-- **Reporting officer:** Bibin K Augustin, <small>Director</small>
+-  <!--- **Reporting officer:** Bibin K Augustin, <small>Director</small> -->
 - Applied remote sensing and GIS for carbon accounting  
 - Tools used:
   - Google Earth Engine (JS & Python)  
