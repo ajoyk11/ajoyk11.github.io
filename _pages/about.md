@@ -12,7 +12,7 @@ working under [Dr. Sandipan Mukherjee](https://scholar.google.com/citations?user
 
 Previously, I was a postgraduate researcher at the <br>
 [Indian Institute of Remote Sensing -ISRO](https://www.iirs.gov.in/),<br>
-advised by  [Dr. Taibanganba Watham](https://www.iirs.gov.in/taibanganba-watham), (Scientist/Engineer -SE).<br>
+advised by  [Dr. Taibanganba Watham](https://www.iirs.gov.in/taibanganba-watham), <small>(Scientist/Engineer -SE)</small>.<br>
 
 Earlier, I was a student at the Department of Environmental Science, <br>
 [Sidho-Kanho-Birsha University](https://www.skbu.ac.in/) and [Bankura Sammilani College](https://bankurasammilanicollege.net/) <br>
