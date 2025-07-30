@@ -8,7 +8,7 @@ author_profile: true
 ## Education
 
 ### [Indian Institute of Remote Sensing (IIRS), India](https://www.iirs.gov.in/)  
-**M.Tech in Remote Sensing & GIS**  
+**Master of Technology in Remote Sensing & GIS**  
 *Aug 2023 – June 2025*  
 - Specialization: Forest Resources and Ecosystem Analysis  
 - **Dissertation:** *Impact of Fire on Carbon Flux in North Western Himalaya*  
@@ -17,7 +17,7 @@ author_profile: true
 ---
 
 ### [Sidho-Kanho-Birsha University, West Bengal, India](https://skbu.ac.in/)  
-**M.Sc in Environmental Science**  
+**Master of Science in Environmental Science**  
 *Aug 2021 – June 2023*  
 - Specialization: Remote Sensing  
 - **Dissertation:** *Assessing the Anthropogenic and Climate Change Drivers in Shaping Landscape*  
@@ -26,7 +26,7 @@ author_profile: true
 ---
 
 ### [Bankura Sammilani College, West Bengal, India](http://www.bankurasammilanicollege.net/)
-**B.Sc in Zoology**  
+**Bachelor of Science in Zoology Programme (with Botany, Chemistry)**  
 *Aug 2018 – July 2021*  
 - **Dissertation:** *Waterbody Assessment using Water Quality Index and Zooplankton Diversity*  
 - **Advisor:** [Dr. Surajit Majumder](https://www.researchgate.net/profile/Surajit-Majumder)
