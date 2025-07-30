@@ -26,7 +26,7 @@ author_profile: true
 ---
 
 ### [Bankura Sammilani College, West Bengal, India](http://www.bankurasammilanicollege.net/)
-**Bachelor of Science in Zoology Programme (with Botany, Chemistry)**  
+**Bachelor of Science in Zoology Programme**  
 *Aug 2018 – July 2021*  
 - **Dissertation:** *Waterbody Assessment using Water Quality Index and Zooplankton Diversity*  
 - **Advisor:** [Dr. Surajit Majumder](https://www.researchgate.net/profile/Surajit-Majumder)
