@@ -35,4 +35,5 @@ author_profile: true
 
 ### Field & Ecological Instrumentation
 - Eddy Covariance Flux Tower: Maintenance & Data Handling  
-- Sap Flow Meter  
+- Sap Flow Meter
+- Water Quality Monitoring Instruments 
