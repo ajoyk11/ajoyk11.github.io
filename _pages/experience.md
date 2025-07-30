@@ -11,7 +11,7 @@ author_profile: true
 **G.B. Pant National Institute of Himalayan Environment, India**  
 *July 2025 – Present*  
 - **Project:** *Carbon Budget and Eco-hydrological Dynamics of Selected Himalayan High-altitude Grasslands and Their Carrying Capacity*  
-- **PI & Advisor:** Dr. Sandipan Mukherjee  
+- **PI & Advisor:** Dr. Sandipan Mukherjee <small>(Scientist - E)</small>
 - Conducting field campaigns and analyzing flux tower eddy covariance data  
 - Responsibilities include:
   - Maintaining flux tower instruments  
@@ -23,7 +23,7 @@ author_profile: true
 **Indian Institute of Remote Sensing (IIRS), India**  
 *July 2024 – June 2025*
 - **Project:** *Impact of Fire on Carbon Flux in North Western Himalaya*  
-- **Advisor:** Dr. Taibanganba Watham, Scientist/Engineer - SE
+- **Advisor:** Dr. Taibanganba Watham, <small> Scientist/Engineer - SE</small>
 - Responsibilities include:
 - Field visits and data collection 
 - Analyzed eddy covariance carbon flux data
@@ -33,7 +33,7 @@ author_profile: true
 ### Research Intern  
 **CSIR - Central Mechanical Engineering Research Institute, India**  
 *April 2023 – June 2023*
-- **Advisor:** Dr. Biswajit Ruj, Chief Scientist
+- **Advisor:** Dr. Biswajit Ruj, <small>Chief Scientist</small>
 
 ---
 
@@ -42,7 +42,8 @@ author_profile: true
 ### Project Intern  
 **Equator Geo Pvt. Ltd., India**  
 *Feb 2025 – April 2025*  
-- **Project:** *The Race to Net Zero*  
+- **Project:** *The Race to Net Zero*
+- **Reporting officer:** Bibin K Augustin, <small>Director</small>
 - Applied remote sensing and GIS for carbon accounting  
 - Tools used:
   - Google Earth Engine (JS & Python)  
