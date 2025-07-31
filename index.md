@@ -14,10 +14,14 @@ I am Ajoy Karmakar, a budding researcher passionate about understanding short-te
 <style>
   .association-grid {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;       /* One row only */
+    justify-content: flex-start;
     gap: 30px;
     margin: 30px 0;
+    overflow-x: auto;        /* Enables horizontal scroll */
+    padding-bottom: 10px;    /* Space for scrollbar */
+    scrollbar-color: #bbb #fff;
+    scrollbar-width: thin;
   }
   .association-card {
     background: #fff;
@@ -28,6 +32,7 @@ I am Ajoy Karmakar, a budding researcher passionate about understanding short-te
     text-align: center;
     transition: transform 0.2s;
     text-decoration: none;
+    flex: 0 0 auto;         /* Prevent shrinking */
   }
   .association-card:hover {
     transform: translateY(-7px) scale(1.05);
@@ -82,7 +87,7 @@ I am Ajoy Karmakar, a budding researcher passionate about understanding short-te
   </a>
   
   <a href="https://gbpihed.gov.in/" target="_blank" class="association-card">
-    <img src="/assets/images/logos/gbpnihe.jpg" alt="GBPNIHE"/>
+    <img src="/assets/images/logos/gbpnihe.png" alt="GBPNIHE"/>
     <strong>GBPNIHE</strong>
   </a>
 
