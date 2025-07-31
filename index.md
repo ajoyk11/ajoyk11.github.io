@@ -27,6 +27,7 @@ I am Ajoy Karmakar, a budding researcher passionate about understanding short-te
     width: 130px;
     text-align: center;
     transition: transform 0.2s;
+    text-decoration: none;
   }
   .association-card:hover {
     transform: translateY(-7px) scale(1.05);
@@ -46,56 +47,43 @@ I am Ajoy Karmakar, a budding researcher passionate about understanding short-te
   }
 </style>
 
-
 ## My Associations so far
 
-<div align="center">
+<div class="association-grid">
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://bankurasammilanicollege.net/" target="_blank">
-        <img src="/assets/images/logos/bsc.png" alt="Bankura Sammilani College" width="80" height="80"/><br/>
-        <strong>Bankura Sammilani College</strong>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://www.skbu.ac.in/" target="_blank">
-        <img src="/assets/images/logos/skbu.png" alt="SKBU" width="80" height="80"/><br/>
-        <strong>SKBU</strong>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://www.cmeri.res.in/" target="_blank">
-        <img src="/assets/images/logos/cmeri.png" alt="CMERI" width="80" height="80"/><br/>
-        <strong>CMERI</strong>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://www.wbpcb.gov.in/" target="_blank">
-        <img src="/assets/images/logos/wbpcb.png" alt="WBPCB" width="80" height="80"/><br/>
-        <strong>WBPCB</strong>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://www.iirs.gov.in/" target="_blank">
-        <img src="/assets/images/logos/iirs.png" alt="IIRS-ISRO" width="80" height="80"/><br/>
-        <strong>IIRS-ISRO</strong>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://equatorgeo.com/" target="_blank">
-        <img src="/assets/images/logos/equator.png" alt="Equator Geo" width="80" height="80"/><br/>
-        <strong>Equator Geo</strong>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://gbpihed.gov.in/" target="_blank">
-        <img src="/assets/images/logos/gbpnihe.jpg" alt="GBPNIHE" width="80" height="80"/><br/>
-        <strong>GBPNIHE</strong>
-      </a>
-    </td>
-  </tr>
-</table>
+  <a href="https://bankurasammilanicollege.net/" target="_blank" class="association-card">
+    <img src="/assets/images/logos/bsc.png" alt="Bankura Sammilani College"/>
+    <strong>Bankura Sammilani College</strong>
+  </a>
+  
+  <a href="https://www.skbu.ac.in/" target="_blank" class="association-card">
+    <img src="/assets/images/logos/skbu.png" alt="SKBU"/>
+    <strong>SKBU</strong>
+  </a>
+  
+  <a href="https://www.cmeri.res.in/" target="_blank" class="association-card">
+    <img src="/assets/images/logos/cmeri.png" alt="CMERI"/>
+    <strong>CMERI</strong>
+  </a>
+  
+  <a href="https://www.wbpcb.gov.in/" target="_blank" class="association-card">
+    <img src="/assets/images/logos/wbpcb.png" alt="WBPCB"/>
+    <strong>WBPCB</strong>
+  </a>
+  
+  <a href="https://www.iirs.gov.in/" target="_blank" class="association-card">
+    <img src="/assets/images/logos/iirs.png" alt="IIRS-ISRO"/>
+    <strong>IIRS-ISRO</strong>
+  </a>
+  
+  <a href="https://equatorgeo.com/" target="_blank" class="association-card">
+    <img src="/assets/images/logos/equator.png" alt="Equator Geo"/>
+    <strong>Equator Geo</strong>
+  </a>
+  
+  <a href="https://gbpihed.gov.in/" target="_blank" class="association-card">
+    <img src="/assets/images/logos/gbpnihe.jpg" alt="GBPNIHE"/>
+    <strong>GBPNIHE</strong>
+  </a>
 
 </div>
