@@ -11,6 +11,42 @@ I am Ajoy Karmakar, a budding researcher passionate about understanding short-te
 
 <div style="height:10cm;"></div>
 
+<style>
+  .association-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+  }
+  .association-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    padding: 20px 15px;
+    width: 130px;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  .association-card:hover {
+    transform: translateY(-7px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  }
+  .association-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  .association-card strong {
+    display: block;
+    color: #222;
+    font-size: 1em;
+    margin-top: 5px;
+  }
+</style>
+
+
 ## My Associations so far
 
 <div align="center">
