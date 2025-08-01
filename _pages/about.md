@@ -6,7 +6,8 @@ author_profile: true
 ---
 
 
-I am a Junior Research Fellow at the Ladakh Regional Center, [G B Pant National Institute of Himalayan Environment](https://gbpihed.gov.in/),<br>
+I am a Junior Research Fellow at the <br>
+Ladakh Regional Center, [G B Pant National Institute of Himalayan Environment](https://gbpihed.gov.in/),<br>
 working under [Dr. Sandipan Mukherjee](https://scholar.google.com/citations?user=ZdwopNMAAAAJ&hl=en), <small>(Scientist-E & Head, Ladakh Regional Center).<br></small>
 
 
