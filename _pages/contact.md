@@ -34,10 +34,10 @@ style="border: 1px solid black"></iframe>
 
 <div class="contact-form-bottom">
   <h2>Send me a message</h2>
-  <form name="contact" method="POST" data-netlify="true">
-    <input type="text" name="name" placeholder="Name" required />
-    <input type="email" name="email" placeholder="Email" required />
-    <textarea name="message" placeholder="Message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
+  <div style="max-width:700px;margin:auto;">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc7tdfY2tdwqQZqGLVp7s00Oemi9WM27EtLVJ7wW0V-dhWX1Y2g/viewform?embedded=true"
+      width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">
+      Loading…
+    </iframe>
+  </div>
 </div>
