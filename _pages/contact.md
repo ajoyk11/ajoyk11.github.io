@@ -31,7 +31,6 @@ style="border: 1px solid black"></iframe>
 </small>
 
 <hr>
-
 <div class="contact-form-bottom">
   <h2>Send me a message</h2>
   <div style="max-width:700px;margin:auto;">
