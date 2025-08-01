@@ -9,7 +9,7 @@ author_profile: true
 
 ### Junior Research Fellow  
 **G.B. Pant National Institute of Himalayan Environment, India** <br>
-<small> (An Autonomous Institute of Ministry of Environment, Forest & Climate Change, Govt. of India) </small>
+<small> (An Autonomous Institute of Ministry of Environment, Forest & Climate Change, Govt. of India) </small><br>
 *July 2025 – Present*  
 - **Project:** *Carbon Budget and Eco-hydrological Dynamics of Selected Himalayan High-altitude Grasslands and Their Carrying Capacity*  
 - **PI & Advisor:** Dr. Sandipan Mukherjee <small>(Scientist - E)</small>
