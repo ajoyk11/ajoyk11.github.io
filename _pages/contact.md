@@ -30,3 +30,14 @@ style="border: 1px solid black"></iframe>
   <a href="https://www.openstreetmap.org/#map=16/34.1456775/77.5781226">View Larger Map</a>
 </small>
 
+<hr>
+
+<div class="contact-form-bottom">
+  <h2>Send me a message</h2>
+  <form name="contact" method="POST" data-netlify="true">
+    <input type="text" name="name" placeholder="Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <textarea name="message" placeholder="Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>
