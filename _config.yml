@@ -101,3 +101,9 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+
+minimal_mistakes_skin: "dirt"
+favicon: "/assets/images/logos/a.png"
+search: false
+
