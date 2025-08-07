@@ -1287,9 +1287,40 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 .page__footer-follow li {
   text-transform: none !important;
 }
-/* TO CHANGE THE FONT */
+/* ==========================================================================TO CHANGE THE FONT ========================================================================== */
+
 /* @import url('https://fonts.googleapis.com/css?family=Roboto');
 body, .page, .page__content, .site {
   font-family: 'Roboto', serif !important;
 }
 */
+/* ========================================================================== Wrap Lab and Map in a Flexbox Container ========================================================================== */
+
+.contact-row {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 32px;
+  align-items: flex-start;
+}
+.lab-info {
+  flex: 1 1 320px;
+  min-width: 250px;
+  max-width: 480px;
+}
+.map-info {
+  flex: 1 1 350px;
+  min-width: 300px;
+  max-width: 500px;
+}
+@media (max-width: 900px) {
+  .contact-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .lab-info, .map-info {
+    max-width: 100%;
+  }
+  .map-info {
+    margin-top: 24px;
+  }
+}
