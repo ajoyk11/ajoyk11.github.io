@@ -1,0 +1,33 @@
+---
+title: "Contact"
+permalink: /contact/
+layout: single
+author_profile: true
+---
+
+<h2>Email</h2>
+<p>You can write to me in either of these IDs:</p>
+<ul>
+  <li><a href="mailto:ajoy.iirs@gmail.com">ajoy.iirs@gmail.com</a></li>
+  <li><a href="mailto:ajoy@iirsddn.ac.in">ajoy@iirsddn.ac.in</a></li>
+</ul>
+
+<h2>Where to Find Me</h2>
+<!-- Interactive Leaflet map with fullscreen control -->
+<div id="map" style="width: 400px; height: 300px; border: 1px solid black; margin-bottom: 1em;"></div>
+
+<!-- Leaflet.js and Fullscreen Plugin CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css"/>
+
+<!-- Leaflet.js and Fullscreen Plugin JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
+<script>
+  var map = L.map('map').setView([34.1456775, 77.5781226], 15);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19
+  }).addTo(map);
+  L.marker([34.1456775, 77.5781226]).addTo(map);
+  map.addControl(new L.Control.Fullscreen());
+</script>
