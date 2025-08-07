@@ -34,10 +34,15 @@ author_profile: true
     attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank">OSM</a>'
   }).addTo(map);
 
-  L.marker([34.1456775, 77.5781226]).addTo(map);
+  // *** Add My inmage as marker ***
+  var myIcon = L.icon({
+      iconUrl: '/assets/images/me.png',
+      iconSize:     [40, 40],
+      iconAnchor:   [20, 40],
+      popupAnchor:  [0, -40]
+  });
+  L.marker([34.1456775, 77.5781226], {icon: myIcon}).addTo(map);
 
   map.addControl(new L.Control.Fullscreen());
-
-  // Add only one attribution control (do NOT duplicate)
   L.control.attribution({ position: 'bottomright' }).addTo(map);
 </script>
