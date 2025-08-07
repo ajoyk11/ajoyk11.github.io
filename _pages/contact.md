@@ -25,6 +25,9 @@ DIHAR Road - Leh 194101 Ladakh (UT), India <br>
 <iframe width="400" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
 src="https://www.openstreetmap.org/export/embed.html?bbox=77.5695%2C34.1395%2C77.5875%2C34.1535&amp;marker=34.1456775%2C77.5781226"
 style="border: 1px solid black"></iframe>
+<small>
+  <a href="https://www.openstreetmap.org/#map=16/34.1456775/77.5781226" target="_blank">[ ] Full Screen Map</a>
+</small>
 
 <hr>
 <div class="contact-form-bottom">
