@@ -27,10 +27,10 @@ author_profile: true
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
 <script>
-  var map = L.map('map', { attributionControl: false }).setView([34.1456775, 77.5781226], 16);
+  var map = L.map('map', { attributionControl: false }).setView([34.1456775, 77.5781226], 14);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 14,
+    maxZoom: 20,
     attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'
   }).addTo(map);
 
