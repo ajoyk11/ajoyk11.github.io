@@ -1,1 +1,15 @@
-main: []
+main:
+  - title: "About"
+    url: /about/
+  - title: "Education"
+    url: /education/
+  - title: "Experience"
+    url: /experience/
+  - title: "Skills"
+    url: /skills/
+  - title: "Publications"
+    url: /publications/
+  - title: "Contact"
+    url: /contact/
+  - title: "CV"
+    url: /assets/files/cv.pdf
