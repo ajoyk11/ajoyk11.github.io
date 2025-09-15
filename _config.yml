@@ -16,7 +16,7 @@ description: >-
   Ajoy Karmakar's personal web page
 url: "https://ajoyk11.github.io"
 repository: "ajoyk11/ajoyk11.github.io"
-minimal_mistakes_skin: "air"
+minimal_mistakes_skin: "dart"
 search: false
 
 # Analytics
@@ -103,7 +103,7 @@ tag_archive:
   path: /tags/
 
 
-minimal_mistakes_skin: "air"
+minimal_mistakes_skin: "dart"
 favicon: "/assets/images/logos/a.ico"
 search: false
 
