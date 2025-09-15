@@ -103,7 +103,7 @@ tag_archive:
   path: /tags/
 
 
-minimal_mistakes_skin: "dirt"
+minimal_mistakes_skin: "air"
 favicon: "/assets/images/logos/a.ico"
 search: false
 
