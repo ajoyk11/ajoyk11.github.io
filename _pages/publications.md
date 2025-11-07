@@ -3,6 +3,10 @@ title: "Publications"
 permalink: /publications/
 classes: wide
 ---
+# 📝 
+<a href='https://scholar.google.com/citations?user=ObfU_PwAAAAJ&hl=en&authuser=1'>
+  <img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=Citations">
+</a>
 
 ## Journal Publications
 
