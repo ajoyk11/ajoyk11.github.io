@@ -26,3 +26,12 @@ classes: wide
   [**DOI:10.52756/ConfapcCollegeZooBot2023**](https://doi.org/10.52756/ConfapcCollegeZooBot2023){: .btn .btn--primary .btn--small}
 
 <!-- Future publications can be added below like this example -->
+<p style="color:#999; text-decoration: underline; text-decoration-style: wavy; transform: rotate(-2deg); display:inline-block;">
+  Upcoming
+</p>
+
+* **Carbon and water use efficiencies of an alpine grassland of central Himalaya during growing season**  
+  **A. Karmakar**, P. Lohani, A. K. Gupta, and S. Mukherjee (2025, November 18–20).  
+  _International Symposium on Tropical Meteorology (INTROMET 2025)_,  
+  Indian Institute of Tropical Meteorology, Pune, India.  
+  [**Conference presentation**](#){: .btn .btn--primary .btn--small}
