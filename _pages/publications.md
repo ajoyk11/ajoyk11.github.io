@@ -9,8 +9,7 @@ classes: wide
 
 * Mahanty, S., Saha, D., **Karmakar, A.**, Mandal, S., Mandal, R. K., Bhutia, D. D., & Majumder, S. (2024).  
 *Assessing the waterbodies through water quality index and zooplankton diversity for environmental sustainability of Bankura, West Bengal, India.*  
-*Agricultural and Biological Research (AGBIR), 40*(2), 1021–1029.  
-[[DOI: 10.35248/0970-1907.24.40.1021-1029](https://doi.org/10.35248/0970-1907.24.40.1021-1029)](https://www.abrinternationaljournal.org/articles/assessing-the-waterbodies-through-water-quality-index-and-zooplankton-diversity-for-environmental-sustainability-of-bankura-west-b-107437.html)
+*Agricultural and Biological Research (AGBIR), 40*(2), 1021–1029.[https://doi.org/10.35248/0970-1907.24.40.1021-1029](https://www.abrinternationaljournal.org/articles/assessing-the-waterbodies-through-water-quality-index-and-zooplankton-diversity-for-environmental-sustainability-of-bankura-west-b-107437.html)
 
 
 
