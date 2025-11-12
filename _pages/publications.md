@@ -30,7 +30,7 @@ https://doi.org/10.52756/ConfapcCollegeZooBot2023
 
 
 <!-- Future publications can be added below like this example -->
-<p style="color:#999; text-decoration: underline; text-decoration-style: wavy; transform: rotate(-2deg); display:inline-block; font-size:1.5em;">
+<p style="color:#999; text-decoration: underline; text-decoration-style: wavy; transform: rotate(-5deg); display:inline-block; font-size:1.5em;">
   Upcoming
 </p>
 
