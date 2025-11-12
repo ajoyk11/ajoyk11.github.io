@@ -20,7 +20,7 @@ author_profile: true
 **Master of Science in Environmental Science**  
 *Aug 2021 – June 2023*  
 - Specialization: Remote Sensing  
-- **Dissertation:** *Assessing the Anthropogenic and Climate Change Drivers in Shaping Landscape*  
+<!-- - **Dissertation:** *Assessing the Anthropogenic and Climate Change Drivers in Shaping Landscape*  -->
 - **Advisor:** [Dr. Tarakeshwar Senapati](https://scholar.google.com/citations?user=Bt-UOxwAAAAJ&hl=en)  
 
 ---
