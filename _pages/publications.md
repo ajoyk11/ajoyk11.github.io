@@ -3,7 +3,7 @@ title: "Publications"
 permalink: /publications/
 classes: wide
 ---
-<a href='https://scholar.google.com/citations?user=ObfU_PwAAAAJ&hl=en&authuser=1'>  <img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=Citations"></a> 
+<!-- <a href='https://scholar.google.com/citations?user=ObfU_PwAAAAJ&hl=en&authuser=1'>  <img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=Citations"></a> -->
 
 ## Journal Publications
 
@@ -30,7 +30,7 @@ https://doi.org/10.52756/ConfapcCollegeZooBot2023
 
 
 <!-- Future publications can be added below like this example -->
-<p style="color:#999; text-decoration: underline; text-decoration-style: wavy; transform: rotate(-2deg); display:inline-block;">
+<p style="color:#999; text-decoration: underline; text-decoration-style: wavy; transform: rotate(-2deg); display:inline-block; font-size:1.5em;">
   Upcoming
 </p>
 
