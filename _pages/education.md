@@ -29,4 +29,5 @@ author_profile: true
 **Bachelor of Science in Zoology Programme**  
 *Aug 2018 – July 2021*  
 <!-- - **Dissertation:** *Waterbody Assessment using Water Quality Index and Zooplankton Diversity*   -->
-<!-- - **Advisor:** [Dr. Surajit Majumder](https://www.researchgate.net/profile/Surajit-Majumder) -->
+- **Advisor:** [Dr. Surajit Majumder](https://www.researchgate.net/profile/Surajit-Majumder) 
+
