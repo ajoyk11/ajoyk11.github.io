@@ -18,6 +18,10 @@ classes: wide
 
 ## Conferences / Presentation 
 
+* **Karmakar, A.**, Lohani, P., Gupta, A. K., & Mukherjee, S. (2025, November 18–20).  
+*Carbon and water use efficiencies of an alpine grassland of central Himalaya during growing season* [Conference presentation].  
+*International Symposium on Tropical Meteorology (INTROMET 2025)*, Indian Institute of Tropical Meteorology, Pune, India.
+
 *  **Karmakar, A.**, & Watham, T. (2025, March 21).  
 *Fire-induced carbon flux changes in North-Western Himalaya* [Poster presentation].  
 _IIRS Academia Meet (IAM-2025)_, Indian Institute of Remote Sensing (IIRS), Dehradun, India.
@@ -30,10 +34,10 @@ https://doi.org/10.52756/ConfapcCollegeZooBot2023
 
 
 <!-- Future publications can be added below like this example -->
-<p style="color:#999; text-decoration: underline; text-decoration-style: wavy; transform: rotate(-5deg); display:inline-block; font-size:1.5em;">
+<!--<p style="color:#999; text-decoration: underline; text-decoration-style: wavy; transform: rotate(-5deg); display:inline-block; font-size:1.5em;">
   Upcoming
-</p>
+</p>  -->
 
-* **Karmakar, A.**, Lohani, P., Gupta, A. K., & Mukherjee, S. (2025, November 18–20).  
-*Carbon and water use efficiencies of an alpine grassland of central Himalaya during growing season* [Conference presentation].  
-*International Symposium on Tropical Meteorology (INTROMET 2025)*, Indian Institute of Tropical Meteorology, Pune, India.
+<!-- * **Karmakar, A.**, Lohani, P., Gupta, A. K., & Mukherjee, S. (2025, November 18–20).   -->
+<!-- *Carbon and water use efficiencies of an alpine grassland of central Himalaya during growing season* [Conference presentation].   -->
+<!-- *International Symposium on Tropical Meteorology (INTROMET 2025)*, Indian Institute of Tropical Meteorology, Pune, India. -->
