@@ -21,5 +21,3 @@ and completed my bachelor's from the [Bankura Sammilani College](https://bankura
 
 Broadly, I am interested in biosphere-atmosphere interactions, Carbon Flux Studies, and Remote Sensing.
 
-<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="VERTICAL" data-vanity="ajoykarmakar" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/ajoykarmakar?trk=profile-badge">Ajoy Karmakar</a></div>
-              
