@@ -1,4 +1,4 @@
-name: Update Google Scholar Stats
+name: Update Google Scholar Stats (SerpAPI)
 
 on:
   schedule:
@@ -8,32 +8,43 @@ on:
 jobs:
   update-stats:
     runs-on: ubuntu-latest
+    env:
+      SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+      GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
+
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r google_scholar_crawler/requirements.txt
 
-    - name: Install dependencies
-      run: |
-        pip install -r google_scholar_crawler/requirements.txt
+      - name: Run SerpAPI Google Scholar fetch
+        run: |
+          python google_scholar_crawler/main.py
 
-    - name: Run Google Scholar crawler
-      run: |
-        python google_scholar_crawler/main.py
+      - name: Show results (for debugging)
+        run: |
+          echo "=== stats.json content ==="
+          cat google_scholar_crawler/stats.json || true
+          echo "=== results/gs_data_shieldsio.json content ==="
+          cat results/gs_data_shieldsio.json || true
 
-    - name: Commit updated stats.json
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add google_scholar_crawler/stats.json
-        git commit -m "Update Google Scholar stats" || echo "No changes to commit"
+      - name: Commit updated stats and results
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add google_scholar_crawler/stats.json results/gs_data.json results/gs_data_shieldsio.json || true
+          git commit -m "Update Google Scholar stats (SerpAPI)" || echo "No changes to commit"
 
-    - name: Push changes
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
