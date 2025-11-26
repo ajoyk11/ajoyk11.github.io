@@ -1,4 +1,4 @@
-fetch('/assets/data/google_scholar_stats.json')
+fetch('/google_scholar_crawler/stats.json')
   .then(r => r.json())
   .then(data => {
       document.getElementById("citations").textContent =
