@@ -3,9 +3,26 @@ title: "Publications"
 permalink: /publications/
 classes: wide
 ---
-<a href="https://scholar.google.com/citations?user=ObfU_PwAAAAJ" target="_blank">
-  <img src="https://img.shields.io/badge/Google%20Scholar-Profile-blue?logo=google-scholar">
-</a>
+<!-- __________________________________________________________________________ -->
+<span id="cit_count_badge"
+      style="background:#e7f1ff; color:#000; padding:3px 6px; border-radius:6px; font-size:14px;">
+  Citations <span id="cit_value">…</span>
+</span>
+
+<script src="/google_scholar_crawler/scholar.js"></script>
+<script>
+  // Update only the badge value using the loaded JSON
+  fetch('/assets/data/google_scholar_stats.json')
+    .then(r => r.json())
+    .then(data => {
+      document.getElementById("cit_value").textContent = data.citations;
+    })
+    .catch(error => {
+      document.getElementById("cit_value").textContent = "N/A";
+    });
+</script>
+<!-- __________________________________________________________________________ -->
+
 
 ## Journal Publications
 
