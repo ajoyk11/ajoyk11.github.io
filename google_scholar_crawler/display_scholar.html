@@ -1,6 +1,30 @@
-<div id="gscholar-box">
-    <strong>Google Scholar Citations:</strong>
-    <span id="citations">Loading…</span>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Scholar Stats</title>
 
-<script src="/google_scholar_crawler/scholar.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #citations {
+            font-size: 20px;
+            font-weight: bold;
+            color: #444;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Google Scholar Statistics</h2>
+    <div id="citations">Loading...</div>
+
+    <!-- IMPORTANT: No leading slash -->
+    <script src="scholar.js"></script>
+
+</body>
+</html>
