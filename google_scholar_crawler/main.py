@@ -2,7 +2,7 @@ import json
 from scholarly import scholarly
 
 # ---- SET YOUR GOOGLE SCHOLAR ID HERE ----
-scholar_id = "ObfU_PwAAAAJ"   # change to ------ to test
+scholar_id = "TgCHPTYAAAAJ" #"ObfU_PwAAAAJ"   # change to ------ to test
 
 print(f"Fetching data for Google Scholar ID: {scholar_id}")
 
