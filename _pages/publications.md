@@ -6,6 +6,7 @@ classes: wide
 <a href="https://scholar.google.com/citations?user=ObfU_PwAAAAJ" target="_blank">
   <img src="https://img.shields.io/badge/Google%20Scholar-Profile-blue?logo=google-scholar">
 </a>
+
 ## Journal Publications
 
 * Mahanty, S., Saha, D., **Karmakar, A.**, Mandal, S., Mandal, R. K., Bhutia, D. D., & Majumder, S. (2024).  
