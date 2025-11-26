@@ -9,18 +9,18 @@ classes: wide
   Citations <span id="cit_value">…</span>
 </span>
 
-<script src="/google_scholar_crawler/scholar.js"></script>
 <script>
-  // Update only the badge value using the loaded JSON
-  fetch('/assets/data/google_scholar_stats.json')
+  fetch('/google_scholar_crawler/stats.json?nocache=' + Date.now())
     .then(r => r.json())
     .then(data => {
       document.getElementById("cit_value").textContent = data.citations;
     })
     .catch(error => {
+      console.error(error);
       document.getElementById("cit_value").textContent = "N/A";
     });
 </script>
+
 <!-- __________________________________________________________________________ -->
 
 
