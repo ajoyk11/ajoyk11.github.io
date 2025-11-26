@@ -3,7 +3,7 @@ import json
 import os
 
 # YOUR GOOGLE SCHOLAR ID
-scholar_id = "ObfU_PwAAAAJ"
+scholar_id = "TgCHPTYAAAAJ"
 
 def fetch_stats():
     author = scholarly.search_author_id(scholar_id)
