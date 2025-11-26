@@ -3,8 +3,9 @@ title: "Publications"
 permalink: /publications/
 classes: wide
 ---
-<!-- <a href='https://scholar.google.com/citations?user=ObfU_PwAAAAJ&hl=en&authuser=1'>  <img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=Citations"></a> -->
-
+<a href="https://scholar.google.com/citations?user=ObfU_PwAAAAJ" target="_blank">
+  <img src="https://img.shields.io/badge/Google%20Scholar-Profile-blue?logo=google-scholar">
+</a>
 ## Journal Publications
 
 * Mahanty, S., Saha, D., **Karmakar, A.**, Mandal, S., Mandal, R. K., Bhutia, D. D., & Majumder, S. (2024).  
