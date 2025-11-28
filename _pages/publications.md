@@ -3,7 +3,7 @@ title: "Publications"
 permalink: /publications/
 classes: wide
 ---
-<!-- 
+<!-- & -->
 <span id="cit_count_badge"
       style="background:#e7f1ff; color:#000; padding:3px 6px; border-radius:6px; font-size:14px;">
   Citations <span id="cit_value">…</span>
@@ -20,7 +20,7 @@ classes: wide
       document.getElementById("cit_value").textContent = "N/A";
     });
 </script>
--->
+<!-- & -->
 
 
 ## Journal Publications
