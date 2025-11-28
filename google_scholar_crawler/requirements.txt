@@ -1,1 +1,1 @@
-requests==2.31.0
+scholarly==1.7.11 # requests==2.31.0
