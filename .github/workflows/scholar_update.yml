@@ -2,34 +2,38 @@ name: Update Scholar Stats
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
-  workflow_dispatch:
+    - cron: "0 */12 * * *"   # run every 12 hours
+  workflow_dispatch:          # allow manual trigger
 
 jobs:
   run:
     runs-on: ubuntu-latest
-    env:
-      GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
-    steps:
-    - uses: actions/checkout@v4
 
-    - name: Setup Python
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: "3.10"
 
-    - name: Install
+    - name: Install Dependencies
       run: |
         pip install scholarly
 
-    - name: Run script
+    - name: Run Google Scholar Script
       run: |
         python google_scholar_crawler/main.py
 
-    - name: Commit Output
+    - name: Commit updated stats.json
       run: |
+        git config --local user.email "action@github.com"
         git config --local user.name "GitHub Actions"
-        git config --local user.email "actions@github.com"
-        git add google_scholar_crawler/stats.json results/*
-        git commit -m "Update citation stats" || echo "No changes"
-        git push
+        git add google_scholar_crawler/stats.json
+        git commit -m "Update Google Scholar stats" || echo "No changes to commit"
+
+    - name: Push Changes
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
