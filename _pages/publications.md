@@ -4,20 +4,39 @@ permalink: /publications/
 classes: wide
 ---
 <!-- & -->
+<!-- Citation Badge -->
 <span id="cit_count_badge"
       style="background:#e7f1ff; color:#000; padding:3px 6px; border-radius:6px; font-size:14px;">
   Citations <span id="cit_value">…</span>
 </span>
 
+<!-- Google Scholar Badge -->
+<a href="https://scholar.google.com/citations?user=ObfU_PwAAAAJ" target="_blank">
+    <img id="gs_badge" 
+         src="https://img.shields.io/badge/Citations-Loading...-9cf?logo=google-scholar&labelColor=f6f6f6&style=flat">
+</a>
+
 <script>
   fetch('/google_scholar_crawler/stats.json?nocache=' + Date.now())
     .then(r => r.json())
     .then(data => {
+      // Update text badge
       document.getElementById("cit_value").textContent = data.citations;
+
+      // Update Google Scholar Shields badge dynamically
+      const badge = document.getElementById("gs_badge");
+      badge.src =
+        "https://img.shields.io/badge/Citations-" +
+        encodeURIComponent(data.citations) +
+        "-9cf?logo=google-scholar&labelColor=f6f6f6&style=flat";
     })
     .catch(error => {
       console.error(error);
       document.getElementById("cit_value").textContent = "N/A";
+
+      // Fallback for badge
+      document.getElementById("gs_badge").src =
+        "https://img.shields.io/badge/Citations-N%2FA-lightgrey?logo=google-scholar&labelColor=f6f6f6&style=flat";
     });
 </script>
 <!-- & -->
