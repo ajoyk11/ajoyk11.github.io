@@ -3,7 +3,7 @@ title: "Publications"
 permalink: /publications/
 classes: wide
 ---
-<!-- 
+<!-- & -->
 <a href="https://scholar.google.com/citations?user=ObfU_PwAAAAJ" target="_blank">
     <img id="gs_badge"
          src="https://img.shields.io/badge/Citations-Loading...-9cf?logo=google-scholar&labelColor=f6f6f6&style=flat">
@@ -27,7 +27,8 @@ classes: wide
     });
 </script>
 
--->
+<!-- & -->
+
 
 
 ## Journal Publications
