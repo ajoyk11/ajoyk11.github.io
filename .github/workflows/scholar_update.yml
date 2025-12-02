@@ -20,7 +20,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        pip install scholarly
+        pip install scholarly==1.7.11
 
     - name: Run Google Scholar Script
       run: |
