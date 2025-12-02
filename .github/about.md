@@ -1,2 +1,2 @@
-This folder is used just to update Google Scholar and Research Gate citations automatically.
+This folder is used just to update Google Scholar citations automatically.
 
