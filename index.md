@@ -16,25 +16,12 @@ I am a Junior Research Fellow at the Ladakh Regional Center, G.B. Pant National 
 ---
 ## Research Interests
 
-<div style="display: flex; gap: 40px;">
-
-<div>
-
 - Biosphere–Atmosphere Interactions  
 - Carbon Flux Dynamics  
-
-</div>
-
-<div>
-
 - Remote Sensing & GIS  
 - Ecological Modeling  
 
-</div>
-
-</div>
-
-
+---
 
 <div style="height:5cm;"></div>
 
