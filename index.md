@@ -10,6 +10,21 @@ author_profile: true
 
 I am Ajoy Karmakar, a budding researcher passionate about understanding short-term ecological processes through purely observational data and exploring long-term phenomena using modeling techniques. My work bridges empirical observation, remote sensing, and numerical modeling to gain deeper insights into biogeochemical processes.
 
+
+I am a Junior Research Fellow at the Ladakh Regional Center, G.B. Pant National Institute of Himalayan Environment, working under Dr. Sandipan Mukherjee.
+
+---
+
+## Research Interests
+
+- Biosphere–Atmosphere Interactions  
+- Carbon Flux Dynamics  
+- Remote Sensing & GIS  
+- Biogeochemical Cycles  
+- Ecological Modeling  
+
+
+
 <div style="height:5cm;"></div>
 
 <style>
