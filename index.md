@@ -14,14 +14,25 @@ I am Ajoy Karmakar, a budding researcher passionate about understanding short-te
 I am a Junior Research Fellow at the Ladakh Regional Center, G.B. Pant National Institute of Himalayan Environment, working under Dr. Sandipan Mukherjee.
 
 ---
-
 ## Research Interests
+
+<div style="display: flex; gap: 40px;">
+
+<div>
 
 - Biosphere–Atmosphere Interactions  
 - Carbon Flux Dynamics  
+
+</div>
+
+<div>
+
 - Remote Sensing & GIS  
-- Biogeochemical Cycles  
 - Ecological Modeling  
+
+</div>
+
+</div>
 
 
 
