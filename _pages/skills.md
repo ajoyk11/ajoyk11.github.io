@@ -5,7 +5,7 @@ layout: single
 author_profile: true
 ---
 
-## Skills
+<!-- ## Skills -->
 
 ### Programming Languages
 - Python  
