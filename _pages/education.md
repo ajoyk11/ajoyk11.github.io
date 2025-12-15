@@ -5,7 +5,7 @@ layout: single
 author_profile: true
 ---
 
-## Education
+<!-- ## Education -->
 
 ### [Indian Institute of Remote Sensing (IIRS), India](https://www.iirs.gov.in/)  
 **Master of Technology in Remote Sensing & GIS**  *(Aug 2023 – June 2025)*
