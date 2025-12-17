@@ -1324,3 +1324,25 @@ body, .page, .page__content, .site {
     margin-top: 24px;
   }
 }
+/* ========================================================================== To make images resize depending on count (1 image = large, 2+ images = grid) ========================================================================== */
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.gallery-row figure {
+  flex: 1 1 calc(50% - 15px); /* two images side by side */
+  text-align: center;
+}
+
+.gallery-row figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.gallery-row figure:only-child {
+  flex: 1 1 100%; /* single image takes full width */
+}
