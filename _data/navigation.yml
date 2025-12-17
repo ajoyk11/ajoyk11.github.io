@@ -1,5 +1,4 @@
 main:
- 
   - title: "Education"
     url: /education/
   - title: "Experience"
@@ -12,3 +11,5 @@ main:
     url: /contact/
   - title: "CV"
     url: /assets/files/Ajoy_Karmakar_CV.pdf
+  - title: "Gallery"
+    url: /gallery/
