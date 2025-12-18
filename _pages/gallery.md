@@ -1,35 +1,77 @@
 ---
-layout: page
 title: "Gallery"
+layout: page
 permalink: /gallery/
 ---
 
-# Photos
+# Gallery
 
-## 2025
-
-### 29 May 2025
-
-<img src="/assets/files/field_photos/20250529_abc.jpg" alt="Field visit 2025-05-29" style="width:210px; height:297px; object-fit:cover; border:1px solid #ccc; border-radius:6px;" />
-
-*Caption: Field sampling at Deodara forest stand, Almora.*
+Welcome to my photo gallery. Here are some memorable events.
 
 ---
 
-### 05 April 2025
+## October 2025 – Changthang Fieldwork
 
-<img src="/assets/files/field_photos/20250405_bcd.jpg" alt="Field visit 2025-04-05" style="width:210px; height:297px; object-fit:cover; border:1px solid #ccc; border-radius:6px;" />
-
-*Caption: Early summer observation plot established.*
+<div class="gallery-row">
+  <figure>
+    <img src="/assets/images/album/2025_Oct_Changthang_Field_1.jpg" alt="Changthang Field 1">
+    <figcaption>Caption for photo 1</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/images/album/2025_Oct_Changthang_Field_2.jpg" alt="Changthang Field 2">
+    <figcaption>Caption for photo 2</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/images/album/2025_Oct_Changthang_Field_3.jpg" alt="Changthang Field 3">
+    <figcaption>Caption for photo 3</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/images/album/2025_Oct_Changthang_Field_4.jpg" alt="Changthang Field 4">
+    <figcaption>Caption for photo 4</figcaption>
+  </figure>
+</div>
 
 ---
 
-## 2024
+## September 2025 – Example Event
 
-### 14 December 2024
-
-<img src="/assets/files/field_photos/20241214_xyz.jpg" alt="Field visit 2024-12-14" style="width:210px; height:297px; object-fit:cover; border:1px solid #ccc; border-radius:6px;" />
-
-*Caption: Snowfall event monitoring.*
+<div class="gallery-row">
+  <figure>
+    <img src="/assets/images/album/2025_Sep_Event_1.jpg" alt="September Event">
+    <figcaption>Caption for September photo</figcaption>
+  </figure>
+</div>
 
 ---
+
+## August 2025 – Workshop
+
+<div class="gallery-row">
+  <figure>
+    <img src="/assets/images/album/2025_Aug_Workshop_1.jpg" alt="Workshop photo 1">
+    <figcaption>Caption for photo 1</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/images/album/2025_Aug_Workshop_2.jpg" alt="Workshop photo 2">
+    <figcaption>Caption for photo 2</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/images/album/2025_Aug_Workshop_3.jpg" alt="Workshop photo 3">
+    <figcaption>Caption for photo 3</figcaption>
+  </figure>
+</div>
+
+---
+
+## July 2025 – Field Visit
+
+<div class="gallery-row">
+  <figure>
+    <img src="/assets/images/album/2025_July_Field_1.jpg" alt="Field photo 1">
+    <figcaption>Caption for photo 1</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/images/album/2025_July_Field_2.jpg" alt="Field photo 2">
+    <figcaption>Caption for photo 2</figcaption>
+  </figure>
+</div>
