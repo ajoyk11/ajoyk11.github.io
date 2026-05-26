@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Ajoy Karmakar">
+  <meta name="description" content="">
+  <meta name="theme-color" content="rgb(251, 191, 183)">
+  <meta property="og:site_name" content="Ajoy Karmakar">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:locale" content="en-us">
+  <link rel="canonical" href="">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+  <link rel="manifest" href="/index.webmanifest">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono%7CLora:400,700%7CRoboto:400,700&display=swap">
+  <link rel="stylesheet" href="/css/academic.css">
+
+  <script>
+    window.PAGE_TITLE       = "Forest PFT Classification using RS  &amp; ML | Ajoy Karmakar";
+    window.PAGE_DESCRIPTION = "Forest Plant Fucutional Type Classification Using Google Earth Engine and Machine Learning";
+    window.PAGE_URL         = "/projects/Forest_PFT_NWH";
+  </script>
+
+  <script src="/others/components.js"></script>
+
+  <style>
+    body { padding-top: 70px; }
+  </style>
+
+  <title>Forest PFT Classification using RS  &amp; ML | Ajoy Karmakar</title>
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main">
+
+  <!-- <script>SITE_searchOverlay();</script> -->
+
+  <script>SITE_navbar();</script>
+
+  <!-- ████████████████████████ CONTENT START ████████████████████████████████ -->
+
+  <div id="page-content">
+  <div class="container" style="max-width:860px; margin-bottom:4rem;">
+
+    <p style="margin:2rem 0 0.5rem;"><a href="/">&larr; Back to Homepage</a></p>
+
+    <h1 style="margin-bottom:0.6rem;">
+      Forest PFT Classification using Remote Sensing  &amp; Machine Learning
+    </h1>
+
+    <!-- Authors -->
+    <div class="article-metadata" style="margin-bottom:0.4rem;">
+      <span class="article-metadata li-cite-author">
+        <a href="/authors/admin/"><strong>Ajoy Karmakar</strong></a>
+      </span>
+    </div>
+
+    <!-- Date / Type badge — update as needed -->
+    <div class="article-metadata" style="margin-bottom:1.5rem;" style="text-align: justify;">
+      <span class="article-date">June- July, 2024</span>&nbsp;
+      <!-- <span class="badge badge-secondary" style="font-size:0.75em;">Conference</span> -->
+    </div>
+
+    <!-- Body text -->
+<div class="article-style" style="text-align: justify;">
+
+  <p>
+    The concept of Plant Functional Types (PFTs) provides a robust framework for grouping vegetation based on shared structural, 
+    phenological, and physiological characteristics, as well as their functional responses to environmental conditions. Unlike 
+    biome-level classifications, which represent broad vegetation zones such as deserts, savannahs, and deciduous forests, PFTs 
+    enable a finer and more process-oriented representation of ecosystem functioning. This becomes particularly important in 
+    ecosystem modeling, where species-level parameterization is often constrained by the lack of detailed trait information.
+  </p>
+
+  <p>
+    In the present study, an advanced methodology was developed to classify forest PFTs in the North-Western Himalayan (NWH) region 
+    using Fourier Transformation of time-series NDVI data coupled with a Random Forest machine learning algorithm. The Fourier 
+    decomposition allowed extraction of key temporal features such as amplitude, phase, and mean vegetation dynamics, which are 
+    critical indicators of vegetation phenology and functional behavior.
+  </p>
+
+  <!-- GIF animation section -->
+  <figure style="text-align:center;margin:1.5rem 0;">
+      <p><img src="animation.gif" alt="NDVI Fourier Components Animation" style="max-width:80%;border-radius:4px;"></p>
+    <figcaption style="font-size:0.82em;color:#777;margin-top:4px;">
+      Fig. 1 — Animated representation of vegetation indices including True Color Composite (TCC), False Color Composite (FCC), 
+      NDVI phase, amplitude, Fourier transformed outputs, and mean NDVI.
+    </figcaption>
+  </figure>
+
+  <p>
+    The extracted Fourier features were used as inputs to the Random Forest classifier, enabling the differentiation of vegetation 
+    types based on their temporal signatures rather than solely on spectral characteristics. The classification results demonstrated 
+    strong performance, with an overall accuracy of 0.8257 and a Cohen’s Kappa coefficient of 0.7943, indicating substantial agreement 
+    with ground truth observations.
+  </p>
+
+  <!-- Fourier transformed image -->
+  <figure style="text-align:center;margin:1.5rem 0;">
+    <img src="fourier.png" alt="Fourier Transformed NDVI" style="max-width:60%;border-radius:4px;">
+    <figcaption style="font-size:0.82em;color:#777;margin-top:4px;">
+      Fig. 2 — Example of Fourier transformed NDVI components highlighting temporal vegetation dynamics.
+    </figcaption>
+  </figure>
+
+  <p>
+    In contrast, the MODIS PFT product (MOD12Q1) showed significantly lower performance in representing the actual vegetation 
+    distribution of the region. The product yielded an overall accuracy of 0.3329 and a Cohen’s Kappa of 0.2126, indicating poor 
+    agreement with field observations. Notably, in regions such as the Shiwalik range, Dehradun, and Rishikesh, areas dominated by 
+    deciduous forests were incorrectly classified as evergreen forests, highlighting limitations in the global classification scheme 
+    when applied to complex mountainous terrains.
+  </p>
+
+  <p>
+    The discrepancies observed suggest that global PFT products may not adequately capture regional heterogeneity, particularly in 
+    ecologically sensitive and topographically diverse areas like the NWH. The proposed methodology demonstrates that integrating 
+    time-series analysis with machine learning provides a more reliable and region-specific classification framework.
+  </p>
+
+  <!-- Final PFT map -->
+  <figure style="text-align:center;margin:1.5rem 0;">
+    <img src="final_pft_map.png" alt="Final PFT Classification Map" style="max-width:60%;border-radius:4px;">
+    <figcaption style="font-size:0.82em;color:#777;margin-top:4px;">
+      Fig. 3 — Final Plant Functional Type (PFT) classification map derived using Random Forest and Fourier-transformed NDVI features.
+    </figcaption>
+  </figure>
+
+  <p>
+    Furthermore, the study indicates that a single-level Fourier decomposition captures significant phenological variation across 
+    vegetation types. However, areas with low and stable NDVI signals remain challenging to classify, suggesting that incorporating 
+    higher-order harmonics or additional temporal features could further improve classification accuracy.
+  </p>
+
+  <p>
+    Overall, the results emphasize the need for regionally calibrated PFT datasets for improved ecosystem modeling. The integration of 
+    ground truth data with machine learning algorithms such as Random Forest proves to be a powerful approach for generating accurate 
+    and scalable PFT maps, which are essential for understanding ecosystem sensitivity and carbon dynamics under changing climatic conditions.
+  </p>
+
+</div>
+
+  </div>
+  </div>
+
+  <!-- ████████████████████████ CONTENT END ██████████████████████████████████ -->
+
+  <script>SITE_footer();</script>
+  <script>SITE_citeModal();</script>
+  <script>SITE_scripts();</script>
+
+</body>
+</html>

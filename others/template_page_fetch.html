@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!--
+═══════════════════════════════════════════════════════════════════════════════
+  template_page_fetch.html  —  Universal page template
+  ─────────────────────────────────────────────────────────────────────────────
+  TO CREATE A NEW PAGE:
+    1. Copy and rename this file  (e.g.  skills/index.html)
+    2. Set the three PAGE_* variables in Step 1 below
+    3. Update the <title> tag to match PAGE_TITLE
+    4. Write your content between CONTENT START and CONTENT END
+    5. Open in browser — works directly, no server needed
+═══════════════════════════════════════════════════════════════════════════════
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Ajoy Karmakar">
+  <meta name="description" content="">
+  <meta name="theme-color" content="rgb(251, 191, 183)">
+  <meta property="og:site_name" content="Ajoy Karmakar">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:locale" content="en-us">
+  <link rel="canonical" href="">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+  <link rel="manifest" href="/index.webmanifest">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono%7CLora:400,700%7CRoboto:400,700&display=swap">
+  <link rel="stylesheet" href="/css/academic.css">
+
+  <!-- ══ STEP 1: Set these three values for every new page ═════════════════ -->
+  <script>
+    window.PAGE_TITLE       = "Page Title | Ajoy Karmakar";
+    window.PAGE_DESCRIPTION = "Short SEO description — keep under 155 characters.";
+    window.PAGE_URL         = "/folder/page/";
+  </script>
+
+  <!-- Shared components — navbar, footer, dark-mode, scripts -->
+  <script src="/others/components.js"></script>
+
+  <!-- Page-specific CSS only -->
+  <style>
+    body { padding-top: 70px; }
+    /* add page-specific styles here */
+  </style>
+
+  <!-- ══ STEP 2: Update <title> to match PAGE_TITLE ════════════════════════ -->
+  <title>Page Title | Ajoy Karmakar</title>
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main">
+
+  <!-- SEARCH OVERLAY — currently disabled (no server / no index.json)
+       To re-enable: see others/search_overlay.html for full instructions,
+       then uncomment the line below AND follow the steps in components.js.  -->
+  <!-- <script>SITE_searchOverlay();</script> -->
+
+  <!-- Navbar (includes dark-mode toggle) -->
+  <script>SITE_navbar();</script>
+
+  <!-- ████████████████████████ CONTENT START ████████████████████████████████ -->
+
+  <div id="page-content">
+  <div class="container" style="max-width:860px; margin-bottom:4rem;">
+
+    <!-- Back link — update href to your parent section -->
+    <p style="margin:2rem 0 0.5rem;"><a href="/">&larr; Back to Home</a></p>
+
+    <!-- Page heading -->
+    <h1 style="margin-bottom:0.3rem;">Page Title</h1>
+    <p style="color:#777; font-size:0.88rem; margin-bottom:2rem;">Subtitle or date range</p>
+
+    <!-- YOUR CONTENT HERE ──────────────────────────────────────────────── -->
+
+    <p>Your content goes here.</p>
+
+    <!--
+    ── COPY-PASTE PATTERNS ───────────────────────────────────────────────────
+
+    Section heading with divider:
+    <h2 style="margin:2rem 0 1rem;border-bottom:2px solid #eee;padding-bottom:0.3rem;">
+      Section Name
+    </h2>
+
+    Image with caption:
+    <figure style="text-align:center;margin:1.5rem 0;">
+      <img src="/path/to/image.png" alt="Alt text" style="max-width:100%;border-radius:4px;">
+      <figcaption style="font-size:0.82em;color:#777;margin-top:4px;">Fig. 1 — Caption</figcaption>
+    </figure>
+
+    Experience card (no timeline):
+    <div style="background:#fff;border:1px solid #e8e8e8;border-radius:6px;
+                padding:1.1rem 1.2rem 1rem;margin-bottom:1.2rem;">
+      <h4 style="margin:0 0 0.1rem;font-size:1rem;">Role Title</h4>
+      <p style="color:#1565c0;font-weight:600;font-size:0.88rem;margin:0 0 0.1rem;">Organisation</p>
+      <p style="color:#888;font-size:0.8rem;font-style:italic;margin-bottom:0.6rem;">Mon YYYY – Mon YYYY</p>
+      <ul style="margin:0 0 0 1.1rem;font-size:0.9rem;"><li>Description</li></ul>
+    </div>
+
+    Badge tags:
+    <div style="margin-top:1rem;">
+      <span class="badge badge-secondary">Tag 1</span>
+      <span class="badge badge-secondary">Tag 2</span>
+    </div>
+
+    Author card:
+    <div class="media author-card content-widget-hr">
+      <img class="portrait mr-3" src="/authors/admin/avatar.jpg" alt="Avatar">
+      <div class="media-body">
+        <h5 class="card-title"><a href="/">Ajoy Karmakar</a></h5>
+        <h6 class="card-subtitle">Junior Research Fellow</h6>
+        <p class="card-text" style="font-size:0.85em;color:#777;">
+          GB Pant National Institute of Himalayan Environment, Ladakh
+        </p>
+        <ul class="network-icon" aria-hidden="true">
+          <li><a href="/#contact"><i class="fas fa-envelope"></i></a></li>
+          <li><a href="https://github.com/ajoyk11" target="_blank" rel="noopener"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/ajoykarmakar" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://www.researchgate.net/profile/Ajoy-Karmakar" target="_blank" rel="noopener"><i class="ai ai-researchgate"></i></a></li>
+          <li><a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener"><i class="ai ai-orcid"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    Share buttons (replace PAGE_URL and PAGE_TITLE):
+    <div class="share-box" aria-hidden="true"><ul class="share">
+      <li><a href="https://twitter.com/intent/tweet?url=PAGE_URL&text=PAGE_TITLE"
+             target="_blank" rel="noopener" class="share-btn-twitter"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://www.linkedin.com/shareArticle?url=PAGE_URL&title=PAGE_TITLE"
+             target="_blank" rel="noopener" class="share-btn-linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+      <li><a href="mailto:?subject=PAGE_TITLE&body=PAGE_URL"
+             target="_blank" rel="noopener" class="share-btn-email"><i class="fas fa-envelope"></i></a></li>
+      <li><a href="https://web.whatsapp.com/send?text=PAGE_TITLE%20PAGE_URL"
+             target="_blank" rel="noopener" class="share-btn-whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+    </ul></div>
+    -->
+
+  </div>
+  </div>
+
+  <!-- ████████████████████████ CONTENT END ██████████████████████████████████ -->
+
+  <!-- Footer -->
+  <script>SITE_footer();</script>
+
+  <!-- Cite modal (needed on research / publication pages, harmless elsewhere) -->
+  <script>SITE_citeModal();</script>
+
+  <!-- ALL scripts — must be the very last thing in <body> -->
+  <script>SITE_scripts();</script>
+
+</body>
+</html>

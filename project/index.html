@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Ajoy Karmakar">
+  <meta name="description" content="Projects – Ajoy Karmakar">
+  <meta name="theme-color" content="rgb(251, 191, 183)">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="canonical" href="/project/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono%7CLora:400,700%7CRoboto:400,700&display=swap">
+  <link rel="stylesheet" href="/css/academic.css">
+  <title>Projects | Ajoy Karmakar</title>
+  <style>
+    body { padding-top: 70px; }
+    .page-title { font-size: 1.8rem; font-weight: 700; margin: 2.5rem 0 0.3rem; }
+    .page-subtitle { color: #777; font-size: 0.9rem; margin-bottom: 2rem; }
+    .back-link { font-size: 0.85rem; margin-bottom: 2rem; display: block; }
+
+    /* ── Project grid cards ─────────────────────────────────────────────── */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem; /* space between cards */
+  margin-bottom: 3rem;
+}
+
+.project-card {
+  flex: 0 0 45%;   /* each card takes 45% of the container width */
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+  background: #fff;
+  margin-bottom: 1.4rem; /* ensures spacing on wrap */
+}
+
+.project-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.10); }
+.project-card a { text-decoration: none; color: inherit; }
+.project-card img {
+  width: 60%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+.project-card .card-body { padding: 0.9rem 1rem 1rem; }
+.project-card h3 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  line-height: 1.35;
+}
+.project-card .card-desc {
+  font-size: 0.84rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  line-height: 1.45;
+}
+.project-card .card-meta {
+  font-size: 0.78rem;
+  color: #888;
+}
+.project-card .card-tags { margin-top: 0.5rem; }
+.project-card .badge {
+  font-size: 0.7rem;
+  margin-right: 3px;
+}
+
+  </style>
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main">
+
+<!-- SEARCH OVERLAY -->
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6"><h1>Search</h1></div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div id="search-box">
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+      </div>
+    </section>
+    <section class="section-search-results"><div id="search-hits"></div></section>
+  </div>
+</aside>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+    <a class="navbar-brand" href="/">Ajoy Karmakar</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link active" href="/#research"><span>Research</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="/#publications"><span>Publications</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="/#experience"><span>Experience</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="/#contact"><span>Contact</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="/files/Ajoy_CV.pdf" target="_blank" rel="noopener noreferrer"><span>CV</span></a></li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a></li>
+        <li class="nav-item"><a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--##############################################################################################################################################-->
+<!-- MAIN CONTENT -->
+<div class="container" style="max-width:900px; margin-bottom:4rem;">
+
+  <a class="back-link" href="/#research">&larr; Back to Research</a>
+
+  <h1 class="page-title">Projects</h1>
+  <!--  <p class="page-subtitle">Research and applied projects — click any card to read more.</p>-->
+
+  <div class="project-grid">
+
+    <!-- ── PROJECT  ────────────────────────────────────────── -->
+    <div class="project-card">
+      <a href="/project/Forest_PFT_NWH/">
+        <img src="/project/Forest_PFT_NWH/Final_PFT_Map.png" alt="Forest PFT - Remote sensing">
+        <div class="card-body">
+          <h3>Forest PFT Classification using RS  &amp; ML</h3>
+          <p class="card-desc">
+            Remote Sensing Based Classification of Forest Plant Functional 
+            Type of North-Western Himalayan Region Using Machine Learning and Google Earth Engine
+
+          </p>
+          <div class="card-meta">June 2024 – July 2024</div>
+          <div class="card-tags">
+            <span class="badge badge-secondary">Fourier Transform</span>
+            <span class="badge badge-secondary">ML</span>
+            <span class="badge badge-secondary">GEE</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- ── PROJECT  ─────────────────────────── -->
+    <div class="project-card">
+      <a href="/project/Rapid_Forecast_Surface_Runoff/">
+        <img src="/project/Rapid_Forecast_Surface_Runoff/Flood_Succeptibility_Map.png" alt="High Altitude Grassland study">
+        <div class="card-body">
+          <h3>Coupling atmospheric and hydrodynamic model for rapid forecast of surface runoff</h3>
+          <p class="card-desc">
+            Integration of the WRF atmospheric model with HEC-RAS hydrodynamics for rapid prediction of surface runoff
+          </p>
+          <div class="card-meta">NOV 2024 </div>
+          <div class="card-tags">
+            <span class="badge badge-secondary">WRF</span>
+            <span class="badge badge-secondary">HEC-RAS</span>
+            <span class="badge badge-secondary">Surface Runoff Modeling</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- ── ADD MORE PROJECT CARDS BELOW ────────────────────────────────── -->
+    <div class="project-card">
+      <a href="/project/Urban_Sprawl_Turbidity/">
+        <img src="/project/Urban_Sprawl_Turbidity/Predicted_LULC.png" alt="Project image">
+        <div class="card-body">
+          <h3>Impact of Urban Sprawl on River Turbidity </h3>
+          <p class="card-desc">Analyzing urban expansion impacts on river turbidity using remote sensing</p>
+          <div class="card-meta">Feb 2025</div>
+          <div class="card-tags">
+            <span class="badge badge-secondary">Urban Sprawl</span>
+            <span class="badge badge-secondary">River Turbidity</span>
+            <span class="badge badge-secondary">Remote Sensing</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!--─────────────────────────────────────────────────────────────────────── -->
+        <!-- ──  MORE PROJECT CARDS  ──────────────────────────────────-->
+    <div class="project-card">
+      <a href="/project/Cyclone_Vulnerability/">
+        <img src="/project/Cyclone_Vulnerability/Final_AHP.jpg" alt="Project image">
+        <div class="card-body">
+          <h3>Analysis of Cyclone induced vulnerability of coastal districts of West Bengal and Odisha using MCDM</h3>
+          <p class="card-desc">Analysis of coastal districts of using AHP-TOPSIS multicriteria decision analysis</p>
+          <div class="card-meta">Nov 2023 – Dec 2023</div>
+          <div class="card-tags">
+            <span class="badge badge-secondary">Cyclone vulnerability</span>
+            <span class="badge badge-secondary">AHP-TOPSIS</span>
+          </div>
+        </div>
+      </a>
+    </div>
+   <!-- ─────────────────────────────────────────────────────────────────────── -->
+  </div><!-- /project-grid -->
+</div>
+
+<!-- FOOTER -->
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by"><a href="/privacy/">Privacy Policy</a> &middot; <a href="/terms/">Terms</a></p>
+    <p class="powered-by">
+      Powered by the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top"><span class="button_icon"><i class="fas fa-chevron-up fa-2x"></i></span></a>
+      </span>
+    </p>
+  </footer>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+<script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
+<script>
+  const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+  const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+  const content_type = {'post':"Posts",'project':"Projects",'publication':"Publications",'talk':"Talks"};
+</script>
+<script id="search-hit-fuse-template" type="text/x-template">
+  <div class="search-hit" id="summary-{{key}}"><div class="search-hit-content"><div class="search-hit-name">
+    <a href="{{relpermalink}}">{{title}}</a>
+    <div class="article-metadata search-hit-type">{{type}}</div>
+    <p class="search-hit-description">{{snippet}}</p>
+  </div></div></div>
+</script>
+
+</body>
+</html>

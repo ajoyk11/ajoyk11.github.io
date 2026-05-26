@@ -1,1 +1,0 @@
-# ajoyk111.github.io
