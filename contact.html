@@ -1,10 +1,5 @@
 <!-- ═══════════════════════════════════════════════════════════════════════════
-     CONTACT SECTION  
-     Available icon classes:
-       fas fa-envelope  fas fa-map-marker  fas fa-phone
-       fab fa-linkedin  fab fa-github  fab fa-twitter
-       ai ai-orcid  ai ai-researchgate  ai ai-google-scholar
-       ai ai-scopus  ai ai-academia  ai ai-mendeley  ai ai-semantic-scholar
+     CONTACT SECTION  —  contact.html  (section fragment, loaded by index.html)
      ═══════════════════════════════════════════════════════════════════════════ -->
 
 <section id="contact" class="home-section wg-contact">
@@ -19,7 +14,8 @@
 
         <!-- MESSAGE FORM -->
         <div class="mb-3">
-          <form name="contact" method="POST" action="https://formspree.io/ajoy.iirs@gmail.com">
+          <form name="contact" method="POST" action="https://formsubmit.co/ajoy.iirs@gmail.com">
+            <input type="hidden" name="_captcha" value="false">
             <div class="form-group form-inline">
               <label class="sr-only" for="inputName">Name</label>
               <input type="text" name="name" class="form-control w-100" id="inputName" placeholder="Name" required>
@@ -39,38 +35,14 @@
         <!-- ADDRESS -->
         <ul class="fa-ul">
           <li>
-            <a href="https://www.google.com/maps/place/34%C2%B008'52.4%22N+77%C2%B034'46.4%22E/@34.1478967,77.5785815,467m" target="_blank" rel="noopener">
+            <a href="https://www.google.com/maps/place/34°08'52.4%22N+77°34'46.4%22E" target="_blank" rel="noopener">
               <i class="fa-li fas fa-map-marker fa-2x"></i>
             </a>
             <span>GB Pant NIHE, Ladakh Regional Center, Ruthpa House, DIHAR Road, Leh 194101, Ladakh (UT), India</span>
           </li>
         </ul>
 
-        <!-- SOCIAL ICONS -->
-        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:20px; margin-top:0.8rem; font-size:1.6rem;">
-
-          <a href="mailto:ajoy.iirs@gmail.com" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-
-          <a href="https://www.linkedin.com/in/ajoykarmakar" target="_blank" rel="noopener" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-
-          <a href="https://aratt.ai/user/@ajoyk11" target="_blank" rel="noopener" title="Arattai">
-            <img src="/img/other_icons/arattai.png" alt="Arattai" style="width:1em; height:1em; vertical-align:middle;">
-          </a>
-
-          <!-- Uncomment as needed:
-          <a href="https://github.com/ajoyk11" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://orcid.org/0009-0004-4978-8908" target="_blank" rel="noopener" title="ORCID"><i class="ai ai-orcid"></i></a>
-          <a href="https://www.researchgate.net/profile/Ajoy-Karmakar" target="_blank" rel="noopener" title="ResearchGate"><i class="ai ai-researchgate"></i></a>
-          <a href="https://twitter.com/YOURHANDLE" target="_blank" rel="noopener" title="Twitter"><i class="fab fa-twitter"></i></a>
-          -->
-
-        </div>
-
-        <!-- MAP (hidden inputs used by academic.js to render OpenStreetMap) -->
+        <!-- MAP — sits inside the same column, so width matches form above -->
         <div class="d-none">
           <input id="map-provider" value="2">
           <input id="map-lat"      value="34.1456775">
@@ -79,7 +51,21 @@
           <input id="map-zoom"     value="13">
           <input id="map-api-key"  value="">
         </div>
-        <div id="map"></div>
+        <div id="map" style="height:280px; border-radius:6px; margin-top:1rem;"></div>
+
+        <!-- SOCIAL ICONS -->
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:20px; margin-top:1.2rem; font-size:1.6rem;">
+          <a href="mailto:ajoy.iirs@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/ajoykarmakar" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://aratt.ai/user/@ajoyk11" target="_blank" rel="noopener" title="Arattai">
+            <img src="/img/other_icons/arattai.png" alt="Arattai" style="width:1em; height:1em; vertical-align:middle;">
+          </a>
+          <!-- Uncomment as needed:
+          <a href="https://github.com/ajoyk11" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://orcid.org/0009-0004-4978-8908" target="_blank" rel="noopener" title="ORCID"><i class="ai ai-orcid"></i></a>
+          <a href="https://www.researchgate.net/profile/Ajoy-Karmakar" target="_blank" rel="noopener" title="ResearchGate"><i class="ai ai-researchgate"></i></a>
+          -->
+        </div>
 
       </div><!-- /col-lg-8 -->
     </div><!-- /row -->
