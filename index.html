@@ -149,7 +149,7 @@
     </div></div></div>
   </script>
 
-  <!-- SECTION LOADER -->
+    <!-- SECTION LOADER — replace your existing SECTION LOADER block with this -->
   <script>
   (function () {
     var sections = [
@@ -160,12 +160,36 @@
       /* { id: "section-skills",    file: "/skills.html" }, */
       { id: "section-contact",      file: "/contact.html" }
     ];
+
     sections.forEach(function (s) {
       fetch(s.file)
         .then(function (r) { return r.ok ? r.text() : Promise.reject(s.file + " not found"); })
         .then(function (html) {
           document.getElementById(s.id).innerHTML = html;
-          if (typeof $.fn.scrollspy !== "undefined") $("body").scrollspy("refresh");
+
+          /* Refresh scrollspy after every section injection */
+          if (typeof $.fn.scrollspy !== "undefined") {
+            $("body").scrollspy("refresh");
+          }
+
+          /* ── MAP FIX ───────────────────────────────────────────────────────
+             academic.min.js tries to init the Leaflet map on page load, but
+             contact.html is fetched AFTER that — so #map doesn't exist yet.
+             Once contact.html is injected we re-fire the map init manually.
+          ──────────────────────────────────────────────────────────────────── */
+          if (s.id === "section-contact") {
+            setTimeout(function () {
+              /* academic.js stores its map init as window.initMap or fires it
+                 via a custom event — try both approaches */
+              if (typeof window.initMap === "function") {
+                window.initMap();
+              }
+              /* Re-dispatch the load event so academic.js re-runs map setup */
+              var e = new Event("load");
+              window.dispatchEvent(e);
+            }, 200);  /* 200ms gives the browser time to paint the injected HTML */
+          }
+
         })
         .catch(function (e) { console.warn("Section load error:", e); });
     });
