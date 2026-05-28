@@ -14,56 +14,16 @@
 
 <body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main">
 
-  <!-- Search overlay — enabled here so visitors can still find content -->
-  <aside class="search-results" id="search">
-    <div class="container">
-      <section class="search-header">
-        <div class="row no-gutters justify-content-between mb-3">
-          <div class="col-6"><h1>Search</h1></div>
-          <div class="col-6 col-search-close">
-            <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
-          </div>
-        </div>
-        <div id="search-box">
-          <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-                 autocomplete="off" autocorrect="off" spellcheck="false" type="search">
-        </div>
-      </section>
-      <section class="section-search-results"><div id="search-hits"></div></section>
-    </div>
-  </aside>
-
-  <!-- Navbar with search icon -->
-  <nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
-    <div class="container">
-      <a class="navbar-brand" href="/">Ajoy Karmakar</a>
-      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar"
-              aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span><i class="fas fa-bars"></i></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item"><a class="nav-link" href="/#research"><span>Research</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="/#publications"><span>Publications</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="/#experience"><span>Experience</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="/#contact"><span>Contact</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="/files/Ajoy_CV.pdf" target="_blank" rel="noopener noreferrer"><span>CV</span></a></li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a></li>
-          <li class="nav-item"><a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <script>SITE_navbar();</script>
 
   <!-- ████████████████████████ CONTENT START ████████████████████████████████ -->
   <div id="page-content">
-  <div class="container" style="max-width:860px; margin-bottom:4rem; padding-top:3rem;">
+  <div class="container" style="max-width:860px; margin-bottom:4rem;">
 
-    <h1 style="margin-bottom:0.5rem;">Page not found</h1>
-    <p style="color:#777; margin-bottom:2rem;">
-      The page you were looking for doesn't exist. Try the search bar above, or visit one of these:
+    <p style="margin:2rem 0 0.5rem;"><a href="/">&larr; Back to Home</a></p>
+    <h1 style="margin-bottom:0.3rem;">Page not found</h1>
+    <p style="color:#777; font-size:0.88rem; margin-bottom:2rem;">
+      The page you were looking for doesn't exist. Try one of these:
     </p>
 
     <h2 style="font-size:1.05rem; margin:1.5rem 0 0.5rem; border-bottom:1px solid #eee; padding-bottom:0.3rem;">Main sections</h2>
@@ -87,32 +47,7 @@
 
   <script>SITE_footer();</script>
   <script>SITE_citeModal();</script>
-
-  <!-- Scripts with search fully enabled (SITE_scripts has search disabled, so inline here) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1MSs3N5l2jy2hXt2YVnBo=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
-  <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <script>
-    const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
-    const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
-    const content_type = {"post":"Posts","project":"Projects","publication":"Publications","talk":"Talks"};
-  </script>
-  <script id="search-hit-fuse-template" type="text/x-template">
-    <div class="search-hit" id="summary-{{key}}"><div class="search-hit-content"><div class="search-hit-name">
-      <a href="{{relpermalink}}">{{title}}</a>
-      <div class="article-metadata search-hit-type">{{type}}</div>
-      <p class="search-hit-description">{{snippet}}</p>
-    </div></div></div>
-  </script>
+  <script>SITE_scripts();</script>
 
 </body>
 </html>
-
