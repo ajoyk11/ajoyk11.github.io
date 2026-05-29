@@ -123,7 +123,7 @@
     </div></div>
   </div>
 
-  <!-- SCRIPTS — each appears exactly ONCE, in dependency order -->
+  <!-- SCRIPTS — dependency order: jquery → plugins → search_config → academic.min.js → hljs -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
@@ -133,9 +133,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
-  <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <!-- search_config MUST be defined before academic.min.js reads it — it is, because it's inline after -->
+
+  <!-- search_config MUST be defined BEFORE academic.min.js loads -->
   <script>
     const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
     const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
@@ -149,7 +148,11 @@
     </div></div></div>
   </script>
 
-    <!-- SECTION LOADER — replace your existing SECTION LOADER block with this -->
+  <!-- academic.min.js loads AFTER search_config is defined -->
+  <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <!-- SECTION LOADER -->
   <script>
   (function () {
     var sections = [
@@ -167,27 +170,17 @@
         .then(function (html) {
           document.getElementById(s.id).innerHTML = html;
 
-          /* Refresh scrollspy after every section injection */
           if (typeof $.fn.scrollspy !== "undefined") {
             $("body").scrollspy("refresh");
           }
 
-          /* ── MAP FIX ───────────────────────────────────────────────────────
-             academic.min.js tries to init the Leaflet map on page load, but
-             contact.html is fetched AFTER that — so #map doesn't exist yet.
-             Once contact.html is injected we re-fire the map init manually.
-          ──────────────────────────────────────────────────────────────────── */
+          /* MAP FIX — re-init Leaflet after contact.html is injected */
           if (s.id === "section-contact") {
             setTimeout(function () {
-              /* academic.js stores its map init as window.initMap or fires it
-                 via a custom event — try both approaches */
-              if (typeof window.initMap === "function") {
-                window.initMap();
-              }
-              /* Re-dispatch the load event so academic.js re-runs map setup */
+              if (typeof window.initMap === "function") { window.initMap(); }
               var e = new Event("load");
               window.dispatchEvent(e);
-            }, 200);  /* 200ms gives the browser time to paint the injected HTML */
+            }, 200);
           }
 
         })
