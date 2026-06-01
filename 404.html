@@ -125,7 +125,7 @@
     </div></div>
   </div>
 
-  <!-- SCRIPTS — only change from your version: search_config uses var, moves before academic.min.js -->
+  <!-- SCRIPTS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
@@ -135,8 +135,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+
+  <!-- CHANGE 1: threshold:0 = exact word match only; tokenize:true = AND logic per word -->
   <script>
-    var search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+    var search_config = {"indexURI":"/index.json","minLength":1,"threshold":0,"tokenize":true};
     var i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
     var content_type = {"post":"Posts","project":"Projects","publication":"Publications","talk":"Talks"};
   </script>
@@ -149,6 +151,40 @@
   </script>
   <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
+
+  <!-- CHANGE 2: AND filter — after academic.min.js renders results, hide any
+       result that does not contain ALL words from the query.
+       academic.min.js handles the search; this script just post-filters. -->
+  <script>
+  (function () {
+    var searchInput = document.getElementById("search-query");
+    if (!searchInput) return;
+
+    var observer = new MutationObserver(function () {
+      var query = (searchInput.value || "").trim().toLowerCase();
+      if (!query) return;
+
+      /* Split query into individual words, ignore empty strings */
+      var words = query.split(/\s+/).filter(function (w) { return w.length > 0; });
+      if (words.length < 2) return; /* single word — fuse handles it fine */
+
+      var hits = document.getElementById("search-hits");
+      if (!hits) return;
+
+      /* For each result card, check that ALL words appear in its text */
+      Array.from(hits.querySelectorAll(".search-hit")).forEach(function (el) {
+        var text = (el.innerText || el.textContent || "").toLowerCase();
+        var allMatch = words.every(function (w) { return text.indexOf(w) !== -1; });
+        el.style.display = allMatch ? "" : "none";
+      });
+    });
+
+    var hits = document.getElementById("search-hits");
+    if (hits) {
+      observer.observe(hits, { childList: true, subtree: true });
+    }
+  })();
+  </script>
 
 </body>
 </html>
