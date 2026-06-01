@@ -125,7 +125,7 @@
     </div></div>
   </div>
 
-  <!-- SCRIPTS — identical to index.html, search fully enabled -->
+  <!-- SCRIPTS — only change from your version: search_config uses var, moves before academic.min.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
@@ -135,12 +135,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
-  <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
   <script>
-    const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
-    const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
-    const content_type = {"post":"Posts","project":"Projects","publication":"Publications","talk":"Talks"};
+    var search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+    var i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+    var content_type = {"post":"Posts","project":"Projects","publication":"Publications","talk":"Talks"};
   </script>
   <script id="search-hit-fuse-template" type="text/x-template">
     <div class="search-hit" id="summary-{{key}}"><div class="search-hit-content"><div class="search-hit-name">
@@ -149,6 +147,8 @@
       <p class="search-hit-description">{{snippet}}</p>
     </div></div></div>
   </script>
+  <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 
 </body>
 </html>
