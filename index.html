@@ -190,8 +190,7 @@
         .then(function (html) {
           document.getElementById(s.id).innerHTML = html;
           if (typeof $.fn.scrollspy !== "undefined") { $("body").scrollspy("refresh"); }
-          /* MAP FIX — directly init Leaflet after contact.html is injected,
-             since academic.min.js already ran and won't re-read the inputs */
+          /* MAP FIX — re-init Leaflet after contact.html is injected */
           if (s.id === "section-contact") {
             setTimeout(function () {
               var lat    = document.getElementById("map-lat");
