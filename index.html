@@ -123,22 +123,22 @@
     </div></div>
   </div>
 
-  <!-- SCRIPTS — dependency order: jquery → plugins → search_config → academic.min.js → hljs -->
+  <!-- SCRIPTS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEku1MSs3N5l2jy2hXt2YVnBo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
 
-  <!-- search_config MUST be defined BEFORE academic.min.js loads -->
+  <!-- search_config before academic.min.js — var + threshold:0 + tokenize:true for AND logic -->
   <script>
-    const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
-    const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
-    const content_type = {"post":"Posts","project":"Projects","publication":"Publications","talk":"Talks"};
+    var search_config = {"indexURI":"/index.json","minLength":1,"threshold":0,"tokenize":true};
+    var i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+    var content_type = {"post":"Posts","project":"Projects","publication":"Publications","talk":"Talks"};
   </script>
   <script id="search-hit-fuse-template" type="text/x-template">
     <div class="search-hit" id="summary-{{key}}"><div class="search-hit-content"><div class="search-hit-name">
@@ -147,10 +147,31 @@
       <p class="search-hit-description">{{snippet}}</p>
     </div></div></div>
   </script>
-
-  <!-- academic.min.js loads AFTER search_config is defined -->
   <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
+
+  <!-- AND post-filter: hides results missing any word from a multi-word query -->
+  <script>
+  (function () {
+    var searchInput = document.getElementById("search-query");
+    if (!searchInput) return;
+    var observer = new MutationObserver(function () {
+      var query = (searchInput.value || "").trim().toLowerCase();
+      if (!query) return;
+      var words = query.split(/\s+/).filter(function (w) { return w.length > 0; });
+      if (words.length < 2) return;
+      var hits = document.getElementById("search-hits");
+      if (!hits) return;
+      Array.from(hits.querySelectorAll(".search-hit")).forEach(function (el) {
+        var text = (el.innerText || el.textContent || "").toLowerCase();
+        var allMatch = words.every(function (w) { return text.indexOf(w) !== -1; });
+        el.style.display = allMatch ? "" : "none";
+      });
+    });
+    var hits = document.getElementById("search-hits");
+    if (hits) { observer.observe(hits, { childList: true, subtree: true }); }
+  })();
+  </script>
 
   <!-- SECTION LOADER -->
   <script>
@@ -163,17 +184,12 @@
       /* { id: "section-skills",    file: "/skills.html" }, */
       { id: "section-contact",      file: "/contact.html" }
     ];
-
     sections.forEach(function (s) {
       fetch(s.file)
         .then(function (r) { return r.ok ? r.text() : Promise.reject(s.file + " not found"); })
         .then(function (html) {
           document.getElementById(s.id).innerHTML = html;
-
-          if (typeof $.fn.scrollspy !== "undefined") {
-            $("body").scrollspy("refresh");
-          }
-
+          if (typeof $.fn.scrollspy !== "undefined") { $("body").scrollspy("refresh"); }
           /* MAP FIX — re-init Leaflet after contact.html is injected */
           if (s.id === "section-contact") {
             setTimeout(function () {
@@ -182,7 +198,6 @@
               window.dispatchEvent(e);
             }, 200);
           }
-
         })
         .catch(function (e) { console.warn("Section load error:", e); });
     });
