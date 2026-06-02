@@ -190,13 +190,29 @@
         .then(function (html) {
           document.getElementById(s.id).innerHTML = html;
           if (typeof $.fn.scrollspy !== "undefined") { $("body").scrollspy("refresh"); }
-          /* MAP FIX — re-init Leaflet after contact.html is injected */
+          /* MAP FIX — directly init Leaflet after contact.html is injected,
+             since academic.min.js already ran and won't re-read the inputs */
           if (s.id === "section-contact") {
             setTimeout(function () {
-              if (typeof window.initMap === "function") { window.initMap(); }
-              var e = new Event("load");
-              window.dispatchEvent(e);
-            }, 200);
+              var lat    = document.getElementById("map-lat");
+              var lng    = document.getElementById("map-lng");
+              var zoom   = document.getElementById("map-zoom");
+              var dir    = document.getElementById("map-dir");
+              var mapDiv = document.getElementById("map");
+
+              if (!lat || !lng || !mapDiv) return;
+              if (typeof L === "undefined") return;
+              if (mapDiv._leaflet_id) return;
+
+              var m = L.map(mapDiv).setView([parseFloat(lat.value), parseFloat(lng.value)], zoom ? parseInt(zoom.value) : 13);
+
+              L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              }).addTo(m);
+
+              var marker = L.marker([parseFloat(lat.value), parseFloat(lng.value)]).addTo(m);
+              if (dir && dir.value) { marker.bindPopup(dir.value).openPopup(); }
+            }, 400);
           }
         })
         .catch(function (e) { console.warn("Section load error:", e); });
