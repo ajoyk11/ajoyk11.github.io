@@ -48,6 +48,7 @@
       <input id="pub-search" type="search" placeholder="Search title or author..." style="min-width:220px;">
       <select id="pub-type">
         <option value="">All types</option>
+            <option value="book chapter">Book Chapter</option>
             <option value="conference presentation">Conference presentation</option>
             <option value="journal">Journal</option>
             <option value="poster presentation">Poster presentation</option>
@@ -69,12 +70,12 @@
   <div style="font-weight:600;">
     <a href="/publication/hydrological-dimension-of-ladakh-under-changing-climate/">Hydrological Dimension of Ladakh under Changing Climate</a>
   </div>
-  <div style="font-size:0.88em;color:#555;margin-top:3px;"><a href="/authors/dr-purushottam-kumar-garg/">Dr. Purushottam Kumar Garg</a>, <a href="/authors/dr-shekhar-singh/">Dr. Shekhar Singh</a>, <a href="/authors/mohit-prajapati/">Mohit Prajapati</a>, <a href="/authors/aamir-jan-farooq/">Aamir Jan Farooq</a>, <a href="/authors/mohd-ilyas/">Mohd Ilyas</a>, <a href="/authors/admin/"><strong>Ajoy Karmakar</strong></a>, <a href="/authors/sandipan-mukherjee/">Sandipan Mukherjee</a></div>
+  <div style="font-size:0.88em;color:#555;margin-top:3px;"><a href="/authors/purushottam-kumar-garg/">Purushottam Kumar Garg</a>, <a href="/authors/shekhar-singh/">Shekhar Singh</a>, <a href="/authors/mohit-prajapati/">Mohit Prajapati</a>, <a href="/authors/aamir-jan-farooq/">Aamir Jan Farooq</a>, <a href="/authors/mohd-ilyas/">Mohd Ilyas</a>, <a href="/authors/admin/"><strong>Ajoy Karmakar</strong></a>, <a href="/authors/sandipan-mukherjee/">Sandipan Mukherjee</a></div>
   <div style="margin-top:4px;"><span style="font-size:0.85em;color:#777;">(2026).</span>&nbsp;<span class="badge badge-primary" style="font-size:0.75em;">Journal</span></div>
   <details style="margin-top:6px;">
     <summary style="cursor:pointer;font-size:0.82em;color:#888;">&#9656; Cite (APA 7)</summary>
     <blockquote style="font-size:0.82em;margin:6px 0 0 12px;color:#444;border-left:3px solid #ccc;padding-left:8px;">
-      <a href="/authors/dr-purushottam-kumar-garg/">Garg, D. P. K.</a>, <a href="/authors/dr-shekhar-singh/">Singh, D. S.</a>, <a href="/authors/mohit-prajapati/">Prajapati, M.</a>, <a href="/authors/aamir-jan-farooq/">Farooq, A. J.</a>, <a href="/authors/mohd-ilyas/">Ilyas, M.</a>, <a href="/authors/admin/"><strong>Karmakar, A.</strong></a>, &amp; <a href="/authors/sandipan-mukherjee/">Mukherjee, S.</a> (2026). <em>Hydrological Dimension of Ladakh under Changing Climate</em>.
+      <a href="/authors/purushottam-kumar-garg/">Garg, P. K.</a>, <a href="/authors/shekhar-singh/">Singh, S.</a>, <a href="/authors/mohit-prajapati/">Prajapati, M.</a>, <a href="/authors/aamir-jan-farooq/">Farooq, A. J.</a>, <a href="/authors/mohd-ilyas/">Ilyas, M.</a>, <a href="/authors/admin/"><strong>Karmakar, A.</strong></a>, &amp; <a href="/authors/sandipan-mukherjee/">Mukherjee, S.</a> (2026). <em>Hydrological Dimension of Ladakh under Changing Climate</em>.
     </blockquote>
   </details>
 </div>
@@ -119,6 +120,21 @@
   </div>
   <div style="font-size:0.88em;color:#555;margin-top:3px;"><a href="/authors/subhajit-mahanty/">Subhajit Mahanty</a>, <a href="/authors/dipankar-saha/">Dipankar Saha</a>, <a href="/authors/admin/"><strong>Ajoy Karmakar</strong></a>, <a href="/authors/rohan-sow/">Rohan Sow</a>, <a href="/authors/surajit-majumder/">Surajit Majumder</a></div>
   <div style="margin-top:4px;"><span style="font-size:0.85em;color:#777;">(2023).</span>&nbsp;<span class="badge badge-secondary" style="font-size:0.75em;">Conference presentation</span>&nbsp;<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://doi.org/10.52756/ConfapcCollegeZooBot2023" target="_blank" rel="noopener">DOI / Link</a></div>
+</div>
+
+<div class="pub-list-item" data-type="book chapter" data-year="2026"
+     style="margin-bottom:1.2rem;padding-bottom:1rem;border-bottom:1px solid #eee;">
+  <div style="font-weight:600;">
+    <a href="/publication/assessment-of-productivity-of-selected-grasslands-in-the-tra/">Assessment of Productivity of Selected Grasslands in the Trans-Himalayan Region of Ladakh Using Geospatial Analysis</a>
+  </div>
+  <div style="font-size:0.88em;color:#555;margin-top:3px;"><a href="/authors/shekhar-singh/">Shekhar Singh</a>, <a href="/authors/admin/"><strong>Ajoy Karmakar</strong></a>, <a href="/authors/ajay-kumar-gupta/">Ajay Kumar Gupta</a>, <a href="/authors/sandipan-mukherjee/">Sandipan Mukherjee</a></div>
+  <div style="margin-top:4px;"><span style="font-size:0.85em;color:#777;">(2026).</span>&nbsp;<span class="badge badge-primary" style="font-size:0.75em;">Book Chapter</span></div>
+  <details style="margin-top:6px;">
+    <summary style="cursor:pointer;font-size:0.82em;color:#888;">&#9656; Cite (APA 7)</summary>
+    <blockquote style="font-size:0.82em;margin:6px 0 0 12px;color:#444;border-left:3px solid #ccc;padding-left:8px;">
+      <a href="/authors/shekhar-singh/">Singh, S.</a>, <a href="/authors/admin/"><strong>Karmakar, A.</strong></a>, <a href="/authors/ajay-kumar-gupta/">Gupta, A. K.</a>, &amp; <a href="/authors/sandipan-mukherjee/">Mukherjee, S.</a> (2026). <em>Assessment of Productivity of Selected Grasslands in the Trans-Himalayan Region of Ladakh Using Geospatial Analysis</em>.
+    </blockquote>
+  </details>
 </div>
 
     </div>
