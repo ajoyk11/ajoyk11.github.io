@@ -210,19 +210,7 @@
               }).addTo(m);
 
               var marker = L.marker([parseFloat(lat.value), parseFloat(lng.value)]).addTo(m);
-              if (dir && dir.value) { marker.bindPopup(dir.value);
-               var destLat = parseFloat(lat.value);
-               var destLng = parseFloat(lng.value);
-               var osmUrl = 'https://www.openstreetmap.org/directions'
-                          + '?engine=osrm_car'
-                          + '&route=;' + destLat + ',' + destLng
-                          + '#map=13/' + destLat + '/' + destLng
-                          + '&layers=N';
-              var popupContent = dir.value 
-                + '<br><a href="' + osmUrl + '" target="_blank" rel="noopener" '
-                + 'style="font-size:0.85em;">Routing via OpenStreetMap</a>';
-                marker.bindPopup(popupContent);             
-               } 
+              if (dir && dir.value) { marker.bindPopup(dir.value); } 
             }, 400);// remove .openPopup() from marker.bindPopup(dir.value).openPopup() if dont want open the map location 
           }
         })
