@@ -56,10 +56,10 @@
 
         <!-- MAP -->
         <div class="d-none">
-          <input id="map-provider" value="2">
+          <input id="map-provider" value="1">
           <input id="map-lat"      value="34.1456775"> 
           <input id="map-lng"      value="77.5781226">
-          <input id="map-dir"      value="GB Pant NIHE, Ladakh Regional Center, Ruthpa House, DIHAR Road, Leh 194101, Ladakh (UT), India">
+          <input id="map-dir"      value="GB Pant NIHE, Ladakh Regional Center, Ruthpa House, DIHAR Road, Leh 194101, Ladakh (UT), India"><!-- remove .openPopup() from marker.bindPopup(dir.value).openPopup() line at main index.html if don't want to see it -->
           <input id="map-zoom"     value="13">
           <input id="map-api-key"  value="">
         </div>
@@ -69,47 +69,3 @@
     </div><!-- /row -->
   </div>
 </section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Wait for the theme's map init to finish, then enrich the marker popup
-    setTimeout(function () {
-      var lat  = document.getElementById('map-lat');
-      var lng  = document.getElementById('map-lng');
-      var dir  = document.getElementById('map-dir');
-
-      if (!lat || !lng) return;
-
-      var destLat = parseFloat(lat.value);
-      var destLng = parseFloat(lng.value);
-      var address = dir ? dir.value : '';
-
-      // OSM routing URL: origin blank → OSM asks the user for their location
-      // destination = Ajoy's coords
-      var osmUrl = 'https://www.openstreetmap.org/directions'
-                 + '?engine=osrm_car'
-                 + '&route=;' + destLat + ',' + destLng   // leading ";" = no fixed origin
-                 + '#map=13/' + destLat + '/' + destLng
-                 + '&layers=N';
-
-      var popupContent = address
-        + '<br><a href="' + osmUrl + '" target="_blank" rel="noopener" '
-        + 'style="font-size:0.85em;">Routing via OpenStreetMap</a>';
-
-      // Find the Leaflet map instance and update its marker popup
-      var mapEl = document.getElementById('map');
-      if (mapEl && mapEl._leaflet_map) {
-        mapEl._leaflet_map.eachLayer(function (layer) {
-          if (layer.bindPopup && layer.getLatLng) {
-            layer.bindPopup(popupContent);
-          }
-        });
-      } else {
-        // Fallback: patch every existing popup content via DOM
-        document.querySelectorAll('.leaflet-popup-content').forEach(function (el) {
-          el.innerHTML = popupContent;
-        });
-      }
-    }, 800);
-  });
-</script>

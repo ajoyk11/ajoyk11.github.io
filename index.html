@@ -210,8 +210,8 @@
               }).addTo(m);
 
               var marker = L.marker([parseFloat(lat.value), parseFloat(lng.value)]).addTo(m);
-              if (dir && dir.value) { marker.bindPopup(dir.value).openPopup(); }
-            }, 400);
+              if (dir && dir.value) { marker.bindPopup(dir.value); } 
+            }, 400);// remove .openPopup() from marker.bindPopup(dir.value).openPopup() if dont want open the map location 
           }
         })
         .catch(function (e) { console.warn("Section load error:", e); });
