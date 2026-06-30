@@ -15,7 +15,7 @@ Re-run whenever you add new pages or publications.
 ────────────────────────────────────────────────────────────────────────────────
 """
 
-import csv, os, re, json, io
+import csv, os, re, json
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 SITE_ROOT    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -50,26 +50,6 @@ EXTRA_PAGES = [
 # Folders to auto-scan for index.html pages
 SCAN_DIRS = ["research", "project"]
 # ─────────────────────────────────────────────────────────────────────────────
-
-
-def read_csv_rows(csv_path):
-    """
-    Read the publications CSV regardless of encoding (UTF-8, UTF-8 with BOM,
-    or Windows-1252/Latin-1 — common when saved from Excel on Windows) and
-    regardless of delimiter (tab or comma).
-    """
-    raw = open(csv_path, "rb").read()
-    if raw.startswith(b"\xef\xbb\xbf"):
-        raw = raw[3:]
-    try:
-        text = raw.decode("utf-8")
-    except UnicodeDecodeError:
-        text = raw.decode("cp1252", errors="replace")
-
-    sample = text[:4096]
-    delimiter = "\t" if sample.count("\t") > sample.count(",") else ","
-
-    return list(csv.DictReader(io.StringIO(text), delimiter=delimiter))
 
 
 def strip_html(text):
@@ -123,30 +103,31 @@ entries = []
 # ── 1. Publications from CSV ──────────────────────────────────────────────────
 pub_count = 0
 if os.path.exists(CSV_FILE):
-    for row in read_csv_rows(CSV_FILE):
-        title   = (row.get("Title",  "") or "").strip()
-        year    = (row.get("Year",   "") or "").strip()
-        ptype   = (row.get("Type",   "") or "").strip()
-        authors = [v.strip() for k, v in row.items()
-                   if k and k.startswith("Author") and v and v.strip()]
-        doi     = (row.get("DOI",    "") or "").strip()
-        url_path = "/publication/" + slugify(title)[:60] + "/"
+    with open(CSV_FILE, newline="", encoding="utf-8-sig") as f:
+        for row in csv.DictReader(f):
+            title   = (row.get("Title",  "") or "").strip()
+            year    = (row.get("Year",   "") or "").strip()
+            ptype   = (row.get("Type",   "") or "").strip()
+            authors = [v.strip() for k, v in row.items()
+                       if k.startswith("Author") and v.strip()]
+            doi     = (row.get("DOI",    "") or "").strip()
+            url_path = "/publication/" + slugify(title)[:60] + "/"
 
-        # Body = everything concatenated so all words are searchable
-        body = " ".join(filter(None, [title, year, ptype, " ".join(authors), doi]))
+            # Body = everything concatenated so all words are searchable
+            body = " ".join(filter(None, [title, year, ptype, " ".join(authors), doi]))
 
-        entries.append({
-            "objectID":     url_path,
-            "url":          url_path,
-            "relpermalink": url_path,
-            "title":        title,
-            "section":      "publication",
-            "type":         ptype.lower() if ptype else "publication",
-            "tags":         [ptype] if ptype else [],
-            "body":         body,
-            "snippet":      f"{', '.join(authors[:3])} ({year})" if authors else year,
-        })
-        pub_count += 1
+            entries.append({
+                "objectID":     url_path,
+                "url":          url_path,
+                "relpermalink": url_path,
+                "title":        title,
+                "section":      "publication",
+                "type":         ptype.lower() if ptype else "publication",
+                "tags":         [ptype] if ptype else [],
+                "body":         body,
+                "snippet":      f"{', '.join(authors[:3])} ({year})" if authors else year,
+            })
+            pub_count += 1
     print(f"  Publications indexed: {pub_count}")
 else:
     print(f"  WARNING: {CSV_FILE} not found")

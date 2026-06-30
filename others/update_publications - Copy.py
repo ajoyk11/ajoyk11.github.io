@@ -90,29 +90,6 @@ def type_badge(pub_type):
     return f'<span class="badge {cls}" style="font-size:0.75em;">{pub_type}</span>'
 
 
-def apa_volume_issue_pages(pub):
-    """
-    Build the APA 7 'volume(number), pages' fragment for a journal article.
-    e.g. '65(2), 1021-1029.'  or '65, 1021-1029.'  or '' if nothing available.
-    Volume is italicized per APA 7; the comma/period placement matches APA style.
-    """
-    volume = (pub.get("Volume", "") or "").strip()
-    number = (pub.get("Number", "") or "").strip()
-    pages  = (pub.get("Pages",  "") or "").strip()
-
-    if not volume and not pages:
-        return ""
-
-    frag = ""
-    if volume:
-        frag += f"<em>{volume}</em>"
-        if number:
-            frag += f"({number})"
-    if pages:
-        frag += f", {pages}" if frag else pages
-    return frag + "." if frag else ""
-
-
 # ── 1. HOMEPAGE SECTION ───────────────────────────────────────────────────────
 
 def homepage_item(pub):
@@ -193,17 +170,8 @@ def full_item(pub):
     apa_block = ""
     if ltype in APA_TYPES:
         apa_str  = apa_authors(pub["_authors"], bold_me=True)
-        journal_name = (pub.get("Journal_Name", "") or "").strip()
-        vip      = apa_volume_issue_pages(pub)
         doi_link = f' <a href="{url}" target="_blank">{url}</a>' if url else ""
-        # APA 7: Authors (Year). Title. Journal, Volume(Number), Pages. DOI/URL
-        citation = f"{apa_str} ({year}). <em>{title}</em>."
-        if journal_name:
-            citation += f" <em>{journal_name}</em>"
-            citation += f", {vip}" if vip else "."
-        elif vip:
-            citation += f" {vip}"
-        citation += doi_link
+        citation = f"{apa_str} ({year}). <em>{title}</em>.{doi_link}"
         apa_block = (
             '\n  <details style="margin-top:6px;">'
             '\n    <summary style="cursor:pointer;font-size:0.82em;color:#888;">&#9656; Cite (APA 7)</summary>'
@@ -346,28 +314,6 @@ f'{listing}\n'
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 
-def read_csv_rows(csv_path):
-    """
-    Read the publications CSV regardless of encoding (UTF-8, UTF-8 with BOM,
-    or Windows-1252/Latin-1 — common when saved from Excel on Windows) and
-    regardless of delimiter (tab or comma).
-    """
-    raw = open(csv_path, "rb").read()
-    # Strip BOM if present, then try utf-8, falling back to cp1252.
-    if raw.startswith(b"\xef\xbb\xbf"):
-        raw = raw[3:]
-    try:
-        text = raw.decode("utf-8")
-    except UnicodeDecodeError:
-        text = raw.decode("cp1252", errors="replace")
-
-    sample = text[:4096]
-    delimiter = "\t" if sample.count("\t") > sample.count(",") else ","
-
-    import io
-    return list(csv.DictReader(io.StringIO(text), delimiter=delimiter))
-
-
 def main():
     script_dir        = os.path.dirname(os.path.abspath(__file__))
     csv_path          = os.path.join(script_dir, CSV_FILE)
@@ -379,10 +325,11 @@ def main():
         print(f"Not found: {csv_path}"); return
 
     publications = []
-    for row in read_csv_rows(csv_path):
-        row["_authors"] = [v.strip() for k,v in row.items()
-                           if k and k.startswith("Author") and v and v.strip()]
-        publications.append(row)
+    with open(csv_path, newline="", encoding="utf-8-sig") as f:
+        for row in csv.DictReader(f):
+            row["_authors"] = [v.strip() for k,v in row.items()
+                               if k.startswith("Author") and v.strip()]
+            publications.append(row)
 
     publications.sort(key=lambda r: r.get("Date_for_Sorting","0"), reverse=True)
     top_pubs = publications[:TOP_N]

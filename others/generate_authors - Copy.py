@@ -48,27 +48,6 @@ def apa_initial(full_name: str) -> str:
     return f"{last}, {inits}" if inits else last
 
 
-def read_csv_rows(csv_path):
-    """
-    Read the publications CSV regardless of encoding (UTF-8, UTF-8 with BOM,
-    or Windows-1252/Latin-1 — common when saved from Excel on Windows) and
-    regardless of delimiter (tab or comma).
-    """
-    raw = open(csv_path, "rb").read()
-    if raw.startswith(b"\xef\xbb\xbf"):
-        raw = raw[3:]
-    try:
-        text = raw.decode("utf-8")
-    except UnicodeDecodeError:
-        text = raw.decode("cp1252", errors="replace")
-
-    sample = text[:4096]
-    delimiter = "\t" if sample.count("\t") > sample.count(",") else ","
-
-    import io
-    return list(csv.DictReader(io.StringIO(text), delimiter=delimiter))
-
-
 # ── HTML TEMPLATES ────────────────────────────────────────────────────────────
 
 HEAD_TEMPLATE = """\
@@ -274,19 +253,21 @@ def main():
     authors_dir = os.path.join(script_dir, "authors")
 
     if not os.path.exists(csv_path):
-        print(f"CSV not found: {csv_path}")
+        print(f"❌  CSV not found: {csv_path}")
         return
 
     # ── Read CSV ──────────────────────────────────────────────────────────────
     publications = []
-    for row in read_csv_rows(csv_path):
-        # collect all non-empty author columns
-        authors = []
-        for key, val in row.items():
-            if key and key.startswith("Author") and val and val.strip():
-                authors.append(val.strip())
-        row["_authors"] = authors
-        publications.append(row)
+    with open(csv_path, newline="", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            # collect all non-empty author columns
+            authors = []
+            for key, val in row.items():
+                if key.startswith("Author") and val.strip():
+                    authors.append(val.strip())
+            row["_authors"] = authors
+            publications.append(row)
 
     # Sort by Date_for_Sorting descending (newest first)
     publications.sort(key=lambda r: r.get("Date_for_Sorting", "0"), reverse=True)
@@ -299,12 +280,12 @@ def main():
                 author_pubs[author] = []
             author_pubs[author].append(pub)
 
-    print(f"Found {len(publications)} publications")
-    print(f"Found {len(author_pubs)} unique authors:\n")
+    print(f"📖  Found {len(publications)} publications")
+    print(f"👥  Found {len(author_pubs)} unique authors:\n")
     for name in sorted(author_pubs.keys()):
         slug = slugify(name)
-        marker = "  <- YOU (admin)" if name == ME else ""
-        print(f"   {name:35s}  ->  authors/{slug}/{marker}")
+        marker = "  ← YOU (admin)" if name == ME else ""
+        print(f"   {name:35s}  →  authors/{slug}/{marker}")
 
     print()
 
@@ -334,9 +315,9 @@ def main():
             f.write(html)
 
         created += 1
-        print(f"  OK  authors/{slug}/index.html")
+        print(f"  ✅  authors/{slug}/index.html")
 
-    print(f"\nDone!  {created} author pages created in:  {authors_dir}")
+    print(f"\n🎉  Done!  {created} author pages created in:  {authors_dir}")
 
 
 if __name__ == "__main__":
