@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Ajoy Karmakar">
+  <meta name="description" content="Impact of Urban Sprawl on River Turbidity in Prayagraj">
+  <meta name="theme-color" content="rgb(251, 191, 183)">
+  <meta property="og:site_name" content="Ajoy Karmakar">
+  <meta property="og:title" content="Impact of Urban Sprawl on River Turbidity | Ajoy Karmakar">
+  <meta property="og:description" content="Impact of Urban Sprawl on River Turbidity in Prayagraj: A Remote Sensing Approach">
+  <meta property="og:url" content="/project/Urban_Sprawl_Turbidity/">
+  <meta property="og:locale" content="en-us">
+  <link rel="canonical" href="/project/Urban_Sprawl_Turbidity/">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+  <link rel="manifest" href="/index.webmanifest">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono%7CLora:400,700%7CRoboto:400,700&display=swap">
+  <link rel="stylesheet" href="/css/academic.css">
+
+  <script>
+    window.PAGE_TITLE       = "Impact of Urban Sprawl on River Turbidity | Ajoy Karmakar";
+    window.PAGE_DESCRIPTION = "Impact of Urban Sprawl on River Turbidity in Prayagraj: A Remote Sensing Approach using CA-Markov and Random Forest.";
+    window.PAGE_URL         = "/project/Urban_Sprawl_Turbidity/";
+  </script>
+
+  <script src="/others/components.js"></script>
+
+  <style>
+    body { padding-top: 70px; }
+  </style>
+
+  <title>Impact of Urban Sprawl on River Turbidity | Ajoy Karmakar</title>
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main">
+
+  <!-- <script>SITE_searchOverlay();</script> -->
+
+  <script>SITE_navbar();</script>
+
+  <!-- ████████████████████████ CONTENT START ████████████████████████████████ -->
+
+  <div id="page-content">
+  <div class="container" style="max-width:860px; margin-bottom:4rem;">
+
+    <p style="margin:2rem 0 0.5rem;"><a href="/project/">&larr; Back to Projects</a></p>
+
+    <h1 style="margin-bottom:0.6rem;">Impact of Urban Sprawl on River Turbidity</h1>
+
+    <!-- Authors -->
+    <div class="article-metadata" style="margin-bottom:0.4rem;">
+      <span class="article-metadata li-cite-author">
+        <span>Parthiv Narayan</span>,
+        <a href="https://www.linkedin.com/in/avijnan-das-4b1852166/" target="_blank" rel="noopener">Avijnan Das</a>,
+        <span>Mansi Rautela</span>,
+        <span>Sudikin Pramanik</span>,
+        <a href="/authors/admin/"><strong>Ajoy Karmakar</strong></a>
+      </span>
+    </div>
+
+    <!-- Type badge -->
+    <div class="article-metadata" style="margin-bottom:1.5rem;">
+      <span class="badge badge-secondary" style="font-size:0.75em;">Project</span>
+    </div>
+
+    <!-- Body -->
+    <div class="article-style" style="text-align:justify;">
+
+      <p>This study examines the spatial and temporal dynamics of urban expansion in Prayagraj (~365 km², 25.4358° N, 81.8463° E) and its influence on turbidity levels at the Triveni Sangam — the confluence of the Ganga, Yamuna, and the mythical Saraswati rivers. Prayagraj, historically known as Prayag, holds profound cultural significance as the host of the Kumbh Mela, the world's largest religious gathering.</p>
+
+      <p><strong>Objectives:</strong> (1) Predict Land Use Land Cover (LULC) for 2030. (2) Predict the Normalized Difference Turbidity Index (NDTI) for 2030.</p>
+
+      <p><strong>Data used:</strong> Sentinel-2 (10–60 m, ESA/Copernicus), SRTM DEM (30 m, NASA/USGS), and OpenStreetMap road network data.</p>
+
+      <p>A Random Forest classifier was applied to Sentinel-2 imagery to map LULC changes, while temporal regression models assessed historical urbanization and river turbidity trends. DEM and road data were integrated into a Cellular Automata-Markov (CA-Markov) model to project future LULC for 2030.</p>
+
+      <p>Cubic trend analysis (2020–2025) reveals rapid urban expansion, with forests, barren land, and agriculture converting to built-up areas — particularly in central Prayagraj. The Maha Kumbh Mela 2025 emerged as a significant statistical outlier, driving massive short-term urbanization that the CA-Markov model captured effectively, while regression-based approaches failed to sustain predictive accuracy under such abrupt change.</p>
+
+      <p>By June 2030, the Impervious Built-up Index (IBI) is projected to reach 0.4010, and NDTI is expected to reach 0.2789 — indicating continued urbanization linked to rising river turbidity. A strong positive correlation (R² = 0.7408) between IBI and NDTI confirms that urban growth is a primary driver of turbidity increase. Notably, the predicted LULC map shows the Kumbh-driven urban spike receding, while river turbidity continues its steady rise irrespective of the post-event dispersal.</p>
+
+      <!-- Final LULC Map -->
+      <figure style="text-align:center; margin:1.5rem 0;">
+        <img src="/project/Urban_Sprawl_Turbidity/Predicted_LULC.png"
+             alt="Predicted LULC Map 2030" style="max-width:80%; border-radius:4px;">
+        <figcaption style="font-size:0.82em; color:#777; margin-top:4px;">
+          Fig. 1 — Predicted Land Use Land Cover (LULC) Map for 2030, derived using CA-Markov modelling and Random Forest classification of Sentinel-2 data.
+        </figcaption>
+      </figure>
+
+      <p>Interactive maps supporting both objectives are available via the Earth Engine application:
+        <a href="https://ee-ajoyiirs.projects.earthengine.app/view/isgmapathon" target="_blank" rel="noopener">
+          Earth Engine App →
+        </a>
+      </p>
+
+    </div><!-- /article-style -->
+
+    <!-- Tags -->
+    <div class="article-tags" style="margin-top:1rem;">
+      <a class="badge badge-light" href="/tags/remote-sensing/">Remote Sensing</a>
+      <a class="badge badge-light" href="/tags/lulc/">LULC</a>
+      <a class="badge badge-light" href="/tags/ca-markov/">CA-Markov</a>
+      <a class="badge badge-light" href="/tags/turbidity/">River Turbidity</a>
+      <a class="badge badge-light" href="/tags/urban-sprawl/">Urban Sprawl</a>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- ████████████████████████ CONTENT END ██████████████████████████████████ -->
+
+  <script>SITE_footer();</script>
+  <script>SITE_citeModal();</script>
+  <script>SITE_scripts();</script>
+
+</body>
+</html>
